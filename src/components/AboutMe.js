@@ -19,8 +19,9 @@ function AboutMe() {
           Currently enrolled in{" "}
           <a href="https://www.theodinproject.com/">The Odin Project</a>. An
           open source full stack coding curriculum wtih over 1000 hours worth of
-          learning material and projects. It is broken up into various sections
-          including, but not limited to:
+          learning material and projects updated almost daily by a driven
+          community. It is broken up into various sections including, but not
+          limited to:
           <ul>
             <li>
               <a href="https://www.theodinproject.com/paths/foundations?">
@@ -74,7 +75,9 @@ function AboutMe() {
         </li>
       </ul>
       <h2>What I write in</h2>
-      <li></li>
+      <li>
+        At this moment, I have a strong understanding of Front-end development
+      </li>
       <p></p>
     </div>
   );
