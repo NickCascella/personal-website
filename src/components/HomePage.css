@@ -1,0 +1,62 @@
+a {
+  font-style: normal;
+}
+
+.homePage {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+
+  border: 2px solid black;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+}
+
+.siteNavigation {
+  display: flex;
+  position: sticky;
+  flex-direction: column;
+  height: max-content;
+  width: 40%;
+  margin-top: 10em;
+  background-color: burlywood;
+}
+
+.socialMediaLinksList {
+  padding-left: 0;
+  list-style-type: none;
+  background-color: cadetblue;
+}
+
+.socialMediaListItem {
+  margin-top: 0.5em;
+}
+
+.socialMediaLinksList:nth-child(1) {
+  margin-top: 0;
+}
+
+.socialMediaLinksList a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.socialMediaIcon {
+  margin-right: 0.1em;
+  width: 32px;
+  font-weight: bold;
+}
+
+/*
+=================
+DISPLAYED CONTENT
+=================
+*/
+
+.displayedPage {
+  margin-top: 10em;
+  border-left: 1px solid rgba(112, 112, 112, 0.555);
+  width: 60%;
+}

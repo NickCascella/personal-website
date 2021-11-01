@@ -1,0 +1,28 @@
+.aboutMePage {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  border-left: 2px solid rgba(112, 112, 112, 0.555);
+  line-height: 150%;
+}
+
+.aboutMePage h2 {
+  margin-bottom: 0;
+}
+
+.aboutMeList {
+  margin-top: 0;
+  padding-left: 1em;
+}
+
+.aboutMeList li {
+  margin-top: 1em;
+}
+
+.aboutMeList li ul li {
+  margin-top: 0;
+}
+
+.aboutMeList a {
+  font-style: italic;
+}
