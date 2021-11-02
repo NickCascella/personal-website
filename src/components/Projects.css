@@ -5,3 +5,24 @@
   border-left: 2px solid rgba(112, 112, 112, 0.555);
   line-height: 150%;
 }
+
+.projectsList {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.projectsList li {
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(
+    to left,
+    white 50%,
+    rgba(211, 211, 211, 0.52) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.projectsList li:hover {
+  background-position: left bottom;
+  transform: scale(1.05);
+}

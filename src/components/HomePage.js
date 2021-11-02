@@ -11,6 +11,7 @@ import {
 //COMPONENTS
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
+import { TwitterClone } from "./Projects";
 //IMAGES
 import GitHubIcon from "../assets/images/aboutMe/GitHubLogo.png";
 import emailIcon from "../assets/images/aboutMe/emailIcon.PNG";
@@ -65,8 +66,11 @@ function HomePage() {
             <Route path="/home/About-Me">
               <AboutMe></AboutMe>
             </Route>
-            <Route path="/home/Projects">
+            <Route exact path="/home/Projects">
               <Projects></Projects>
+            </Route>
+            <Route path="/home/Projects/TwitterClone">
+              <TwitterClone></TwitterClone>
             </Route>
           </Switch>
         </section>
