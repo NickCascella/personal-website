@@ -1,8 +1,9 @@
 import "../components/AboutMe.css";
+import "../components/sharedFeatures.css";
 
 function AboutMe() {
   return (
-    <div className="aboutMePage">
+    <div className="aboutMePage fadeIn">
       <h2>About Me</h2>
       <ul className="aboutMeList">
         <li>
@@ -17,51 +18,71 @@ function AboutMe() {
         </li>
         <li>
           Currently enrolled in{" "}
-          <a href="https://www.theodinproject.com/">The Odin Project</a>. An
-          open source full stack coding curriculum wtih over 1000 hours worth of
+          <a href="https://www.theodinproject.com/" target="_blank">
+            The Odin Project.
+          </a>
+          An open source full stack coding curriculum wtih 1000+ hours worth of
           learning material and projects updated almost daily by a driven
           community. It is broken up into various sections including, but not
           limited to:
           <ul>
             <li>
-              <a href="https://www.theodinproject.com/paths/foundations?">
+              <a
+                className="completed"
+                href="https://www.theodinproject.com/paths/foundations?"
+                target="_blank"
+              >
                 Foundations
               </a>
             </li>
             <ul>
-              <li>HTML/CSS</li>
-              <li>GIT</li>
-              <li>Javascript</li>
+              <li className="completed">HTML/CSS</li>
+              <li className="completed">GIT</li>
+              <li className="completed">Javascript</li>
             </ul>
             <li>
-              <a href="https://www.theodinproject.com/paths/full-stack-javascript?">
+              <a
+                href="https://www.theodinproject.com/paths/full-stack-javascript?"
+                target="_blank"
+              >
                 Full Stack JS
               </a>
             </li>
             <ul>
-              <li>
+              <li className="completed">
                 {" "}
-                <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript">
+                <a
+                  className="completed"
+                  href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript"
+                  target="_blank"
+                >
                   Front-end
                 </a>
               </li>
               <ul>
-                <li>Javascript</li>
-                <li>React</li>
+                <li className="completed">Javascript</li>
+                <li className="completed">React</li>
               </ul>
               <li>
                 {" "}
-                <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css">
+                <a
+                  href="https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css"
+                  target="_blank"
+                >
                   Design
                 </a>
               </li>
               <ul>
-                <li>Responsive Design</li>
+                <li className="completed">UI and UX</li>
+                <li className="completed">Responsive Design</li>
                 <li>Accessibility</li>
               </ul>
               <li>
                 {" "}
-                <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs">
+                <a
+                  href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs"
+                  target="_blank"
+                >
                   Back-end
                 </a>
               </li>
@@ -74,11 +95,9 @@ function AboutMe() {
           </ul>
         </li>
       </ul>
-      <h2>What I write in</h2>
-      <li>
-        At this moment, I have a strong understanding of Front-end development
-      </li>
-      <p></p>
+      <span className="noteOnOdinList">
+        Note: bolded text is what I have completed up until this point
+      </span>
     </div>
   );
 }

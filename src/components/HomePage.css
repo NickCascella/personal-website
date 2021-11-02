@@ -4,32 +4,28 @@ a {
 
 .homePage {
   display: flex;
-  justify-content: center;
   width: 60%;
-
-  border: 2px solid black;
-  margin: auto;
+  height: 100%;
+  margin-top: 5em;
   font-family: "Raleway", sans-serif;
 }
 
 .siteNavigation {
   display: flex;
-  position: sticky;
   flex-direction: column;
-  height: max-content;
-  width: 40%;
-  margin-top: 10em;
-  background-color: burlywood;
+  width: 35%;
 }
 
 .socialMediaLinksList {
+  margin-top: 0;
   padding-left: 0;
   list-style-type: none;
-  background-color: cadetblue;
 }
 
 .socialMediaListItem {
+  width: max-content;
   margin-top: 0.5em;
+  margin-right: 1em;
 }
 
 .socialMediaLinksList:nth-child(1) {
@@ -45,8 +41,40 @@ a {
 
 .socialMediaIcon {
   margin-right: 0.1em;
-  width: 32px;
+  width: 16px;
+  height: 16px;
   font-weight: bold;
+}
+
+.pageLinks {
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.pageLinks li:nth-child(2) {
+  margin-top: 0.5em;
+}
+
+.pageLinks li {
+  width: 90%;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(
+    to left,
+    white 50%,
+    rgba(211, 211, 211, 0.52) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.pageLinks li:hover {
+  background-position: left bottom;
+  transform: scale(1.05);
+  cursor: pointer;
+  font-weight: 900;
 }
 
 /*
@@ -56,7 +84,44 @@ DISPLAYED CONTENT
 */
 
 .displayedPage {
-  margin-top: 10em;
-  border-left: 1px solid rgba(112, 112, 112, 0.555);
-  width: 60%;
+  width: 65%;
+}
+
+/*
+=================
+LAYOUT CHANGES
+=================
+*/
+
+@media only screen and (max-width: 1100px) {
+  .homePage {
+    width: 80%;
+    flex-direction: column;
+    height: 95vh;
+  }
+  .siteNavigation {
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
+
+  .socialMediaListItem {
+    display: inline-block;
+  }
+  .pageLinks li {
+    width: 100%;
+  }
+  .displayedPage {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .homePage {
+    width: 45%;
+  }
 }

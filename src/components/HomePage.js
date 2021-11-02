@@ -13,14 +13,15 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import { TwitterClone } from "./Projects";
 //IMAGES
-import GitHubIcon from "../assets/images/aboutMe/GitHubLogo.png";
-import emailIcon from "../assets/images/aboutMe/emailIcon.PNG";
+import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
+import emailIcon from "../assets/images/homePage/emailIcon.PNG";
+import linkedInIcon from "../assets/images/homePage/linkedInIcon.PNG";
 
 function HomePage() {
   return (
-    <div className="homePage">
+    <div className="homePage fadeInBasic">
       <Router>
-        <nav className="siteNavigation">
+        <nav className="siteNavigation fadeInLeft">
           <h1>Nicholas Cascella</h1>
           <ul className="socialMediaLinksList">
             <li className="socialMediaListItem">
@@ -30,10 +31,10 @@ function HomePage() {
               >
                 <img
                   className="socialMediaIcon"
-                  src={GitHubIcon}
+                  src={gitHubIcon}
                   alt="GitHub Icon"
                 ></img>{" "}
-                <span>: NickCascella</span>
+                <span className="socialMediaName">: NickCascella</span>
               </a>
             </li>
             <li className="socialMediaListItem">
@@ -46,16 +47,29 @@ function HomePage() {
                   src={emailIcon}
                   alt="Email Icon"
                 ></img>{" "}
-                <span>: cascella3509@gmail.com</span>
+                <span className="socialMediaName">
+                  : cascella3509@gmail.com
+                </span>
               </a>
             </li>
-            <li>
-              <Link to="/home/About-Me">About Me</Link>
+            <li className="socialMediaListItem">
+              <a href="" target="_blank">
+                <img
+                  className="socialMediaIcon"
+                  src={linkedInIcon}
+                  alt="linkedIn Icon"
+                ></img>
+                <span className="socialMediaName">: NickCascella</span>
+              </a>
             </li>
-            <li>
-              {" "}
-              <Link to="/home/Projects">Projects</Link>
-            </li>
+          </ul>
+          <ul className="pageLinks">
+            <Link to="/home/About-Me">
+              <li>About Me</li>
+            </Link>
+            <Link to="/home/Projects">
+              <li>Projects</li>
+            </Link>
           </ul>
         </nav>
         <section className="displayedPage">
