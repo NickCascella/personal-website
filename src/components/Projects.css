@@ -12,23 +12,8 @@
 }
 
 .projectsList li {
-  padding: 0.2em;
-  border-radius: 0.3em;
-  transition: 0.5s ease-in-out;
-  background: linear-gradient(
-    to left,
-    white 50%,
-    rgba(211, 211, 211, 0.52) 50%
-  );
-  background-size: 200% 100%;
-  background-position: right bottom;
-}
-
-.projectsList li:hover {
-  background-position: left bottom;
-  transform: scale(1.05);
-  cursor: pointer;
-  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*

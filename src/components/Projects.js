@@ -1,6 +1,6 @@
 import "../components/Projects.css";
 import "../components/sharedFeatures.css";
-//DEEPENDENCIES
+//DEPENDENCIES
 import { Link } from "react-router-dom";
 
 function Projects() {
@@ -14,22 +14,66 @@ function Projects() {
         learning experiences which taught important concepts, I only wanted to
         showcase the more developed projects.
       </p>
-      <p>In chronological order:</p>
+      <p>Click a project below to learn more.</p>
       <ul aria-label="List of completed projects." className="projectsList">
         <li>This Webapage!</li>
-        <li>Smashing Magazine Webpage Clone</li>
-        <li>New Scientist Webpage Clone</li>
+        <Link className="projectTitle" to="/home/Projects/SmashingMagazine">
+          <li>
+            <span>Smashing Magazine Webpage Clone</span>{" "}
+            <span>JS / HTML / CSS</span>{" "}
+          </li>
+        </Link>
         <li>
-          <Link className="projectTitle" to="/home/Projects/TwitterClone">
-            Twitter Clone<i>ish</i>
-          </Link>
+          <span>New Scientist Webpage Clone</span>
+          <span>JS / HTML / CSS</span>
         </li>
-        <li>Where's Waldo</li>
+        <Link className="projectTitle" to="/home/Projects/TwitterClone">
+          <li>
+            <span>
+              Twitter Clone<i>ish</i>
+            </span>
+            <span>React / JS / HTML / CSS / Firebase</span>
+          </li>
+        </Link>
+        <li>
+          <span>Where's Waldo</span>{" "}
+          <span>React / JS / HTML / CSS / Firebase</span>
+        </li>
         <li>Odin Shop</li>
         <li>Memory Game</li>
         <li>Battleship</li>
         <li>Weather App</li>
       </ul>
+    </div>
+  );
+}
+
+function SmashingMagazineClone() {
+  return (
+    <div className="projectsPage specificProject fadeIn">
+      <h2>Smashing Magazine Clone</h2>
+      <h3>Project Description</h3>
+      <p>
+        A partial twitter clone using React front-end and a Firebase hosted
+        back-end, that attempts to emulate the core functions of tweeting and
+        user profiles. In this application you can:
+        <ul className="projectKeyFeatures">
+          <li>Sign in using your google account.</li>
+          <li>Post tweets to a global feed.</li>
+          <li>
+            Interact with other user tweets by liking, retweeting, and starting
+            reply chains.
+          </li>
+          <li>
+            Profile edits that alter previous tweets by the user such as
+            username, bio, profile picture, and profile background image.
+          </li>
+          <li>Follow/Unfollow other users and viewing their profiles.</li>
+        </ul>
+      </p>
+      <a className="projectLink" href="" target="_blank">
+        Twitter Link
+      </a>
     </div>
   );
 }
@@ -65,4 +109,4 @@ function TwitterClone() {
 }
 
 export default Projects;
-export { TwitterClone };
+export { TwitterClone, SmashingMagazineClone };

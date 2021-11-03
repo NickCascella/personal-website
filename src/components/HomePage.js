@@ -1,4 +1,5 @@
 import "../components/HomePage.css";
+import "../components/sharedFeatures.css";
 //DEEPENDENCIES
 import React from "react";
 import {
@@ -11,7 +12,7 @@ import {
 //COMPONENTS
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
-import { TwitterClone } from "./Projects";
+import { SmashingMagazineClone, TwitterClone } from "./Projects";
 //IMAGES
 import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
 import emailIcon from "../assets/images/homePage/emailIcon.PNG";
@@ -85,6 +86,9 @@ function HomePage() {
             </Route>
             <Route path="/home/Projects/TwitterClone">
               <TwitterClone></TwitterClone>
+            </Route>
+            <Route path="/home/Projects/SmashingMagazine">
+              <SmashingMagazineClone></SmashingMagazineClone>
             </Route>
           </Switch>
         </section>
