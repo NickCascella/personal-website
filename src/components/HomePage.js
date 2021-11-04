@@ -75,7 +75,7 @@ function HomePage() {
         </nav>
         <section className="displayedPage">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/personal-website">
               <Redirect to="/home/About-Me" />
             </Route>
             <Route path="/home/About-Me">
