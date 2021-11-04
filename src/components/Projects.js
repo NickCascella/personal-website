@@ -58,8 +58,11 @@ function SmashingMagazineClone() {
         back-end, that attempts to emulate the core functions of tweeting and
         user profiles. In this application you can:
         <ul className="projectKeyFeatures">
-          <li>Sign in using your google account.</li>
-          <li>Post tweets to a global feed.</li>
+          <li>
+            Responsively designed with flexbox and media queries for device
+            dimensions
+          </li>
+          <li>Emulated </li>
           <li>
             Interact with other user tweets by liking, retweeting, and starting
             reply chains.
@@ -71,8 +74,19 @@ function SmashingMagazineClone() {
           <li>Follow/Unfollow other users and viewing their profiles.</li>
         </ul>
       </p>
-      <a className="projectLink" href="" target="_blank">
-        Twitter Link
+      <a
+        className="projectLink"
+        href="https://www.smashingmagazine.com/"
+        target="_blank"
+      >
+        Smashing Magazine - Original
+      </a>
+      <a
+        className="projectLink"
+        href="https://nickcascella.github.io/SmashingMagazineClone/"
+        target="_blank"
+      >
+        Smashing Magazine - Clone
       </a>
     </div>
   );
