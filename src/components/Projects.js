@@ -2,6 +2,7 @@ import "../components/Projects.css";
 import "../components/sharedFeatures.css";
 //DEPENDENCIES
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Projects() {
   return (
@@ -16,33 +17,36 @@ function Projects() {
       </p>
       <p>Click a project below to learn more.</p>
       <ul aria-label="List of completed projects." className="projectsList">
-        <li>This Webapage!</li>
+        <li>This Webpage!</li>
         <Link className="projectTitle" to="/home/Projects/SmashingMagazine">
           <li>
-            <span>Smashing Magazine Webpage Clone</span>{" "}
-            <span>JS / HTML / CSS</span>{" "}
+            <span className="projectName">
+              New Scientist / Smashing Magazine Webpage Clone
+            </span>{" "}
+            <span className="projectLanguage">JS / HTML / CSS</span>{" "}
           </li>
         </Link>
-        <li>
-          <span>New Scientist Webpage Clone</span>
-          <span>JS / HTML / CSS</span>
-        </li>
+
         <Link className="projectTitle" to="/home/Projects/TwitterClone">
           <li>
-            <span>
+            <span className="projectName">
               Twitter Clone<i>ish</i>
             </span>
-            <span>React / JS / HTML / CSS / Firebase</span>
+            <span className="projectLanguage">
+              React / JS / HTML / CSS / Firebase
+            </span>
           </li>
         </Link>
         <li>
-          <span>Where's Waldo</span>{" "}
-          <span>React / JS / HTML / CSS / Firebase</span>
+          <span className="projectName">Where's Waldo</span>{" "}
+          <span className="projectLanguage">
+            React / JS / HTML / CSS / Firebase
+          </span>
         </li>
-        <li>Odin Shop</li>
-        <li>Memory Game</li>
-        <li>Battleship</li>
-        <li>Weather App</li>
+        <li className="projectName">Odin Shop</li>
+        <li className="projectName">Memory Game</li>
+        <li className="projectName">Battleship</li>
+        <li className="projectName">Weather App</li>
       </ul>
     </div>
   );
@@ -54,24 +58,18 @@ function SmashingMagazineClone() {
       <h2>Smashing Magazine Clone</h2>
       <h3>Project Description</h3>
       <p>
-        A partial twitter clone using React front-end and a Firebase hosted
-        back-end, that attempts to emulate the core functions of tweeting and
-        user profiles. In this application you can:
+        A project meant to test responsive design as well as layout replication
+        of some of the features of the site <i>Smashing Magazine</i>
         <ul className="projectKeyFeatures">
           <li>
             Responsively designed with flexbox and media queries for device
             dimensions
           </li>
-          <li>Emulated </li>
           <li>
-            Interact with other user tweets by liking, retweeting, and starting
-            reply chains.
+            Taught better layout design choices and help developed new ideas and
+            standards for future projects
           </li>
-          <li>
-            Profile edits that alter previous tweets by the user such as
-            username, bio, profile picture, and profile background image.
-          </li>
-          <li>Follow/Unfollow other users and viewing their profiles.</li>
+          <li>Has mobile support</li>
         </ul>
       </p>
       <a
@@ -93,6 +91,10 @@ function SmashingMagazineClone() {
 }
 
 function TwitterClone() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="projectsPage specificProject fadeIn">
       <h2>Twitter Inspired Messaging System</h2>

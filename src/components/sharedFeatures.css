@@ -1,3 +1,5 @@
+/* BLACK UNDERLINE ANIMATION */
+
 .aboutMeList a,
 .projectLink,
 .socialMediaLinksList a {
@@ -31,6 +33,8 @@
   visibility: visible;
   transform: scaleX(1);
 }
+
+/* PAGE LINK (SCALE/GREY COVER) ANIMATION */
 
 .pageLinks li,
 .projectsList li {

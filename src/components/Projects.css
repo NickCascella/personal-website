@@ -14,6 +14,20 @@
 .projectsList li {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.projectName,
+.projectLanguage {
+  display: flex;
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+.projectLanguage {
+  margin-right: 1em;
 }
 
 /*

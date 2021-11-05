@@ -10,9 +10,11 @@ import {
   Link,
 } from "react-router-dom";
 //COMPONENTS
+import ScrollToTop from "./Scroll";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import { SmashingMagazineClone, TwitterClone } from "./Projects";
+
 //IMAGES
 import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
 import emailIcon from "../assets/images/homePage/emailIcon.PNG";
@@ -74,6 +76,7 @@ function HomePage() {
           </ul>
         </nav>
         <section className="displayedPage">
+          <ScrollToTop />
           <Switch>
             <Route exact path="/personal-website">
               <Redirect to="/home/About-Me" />

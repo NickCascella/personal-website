@@ -8,6 +8,11 @@ a {
   height: 100%;
   margin-top: 5em;
   font-family: "Raleway", sans-serif;
+  overflow-y: scroll;
+}
+
+.homePage::-webkit-scrollbar {
+  display: none;
 }
 
 .siteNavigation {
@@ -60,7 +65,7 @@ a {
   width: 90%;
 }
 
-/*
+/*y
 =================
 DISPLAYED CONTENT
 =================
@@ -68,6 +73,7 @@ DISPLAYED CONTENT
 
 .displayedPage {
   width: 65%;
+  padding-bottom: 8em;
 }
 
 /*
@@ -96,7 +102,6 @@ LAYOUT CHANGES
   }
   .displayedPage {
     width: 100%;
-    overflow-y: scroll;
   }
   ::-webkit-scrollbar {
     display: none;
