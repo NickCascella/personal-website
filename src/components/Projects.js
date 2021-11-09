@@ -37,12 +37,14 @@ function Projects() {
             </span>
           </li>
         </Link>
-        <li>
-          <span className="projectName">Where's Waldo</span>{" "}
-          <span className="projectLanguage">
-            React / JS / HTML / CSS / Firebase
-          </span>
-        </li>
+        <Link className="projectTitle" to="/home/Projects/WhereIsWaldo">
+          <li>
+            <span className="projectName">Where's Waldo</span>{" "}
+            <span className="projectLanguage">
+              React / JS / HTML / CSS / Firebase
+            </span>
+          </li>
+        </Link>
         <li className="projectName">Odin Shop</li>
         <li className="projectName">Memory Game</li>
         <li className="projectName">Battleship</li>
@@ -58,8 +60,8 @@ function SmashingMagazineClone() {
       <h2>Smashing Magazine Clone</h2>
       <h3>Project Description</h3>
       <p>
-        A project meant to test responsive design as well as layout replication
-        of some of the features of the site <i>Smashing Magazine</i>
+        Project's meant to test responsive design as well as layout replication
+        of <i>Smashing Magazine</i> and <i>New Scientist</i>
         <ul className="projectKeyFeatures">
           <li>
             Responsively designed with flexbox and media queries for device
@@ -85,6 +87,21 @@ function SmashingMagazineClone() {
         target="_blank"
       >
         Smashing Magazine - Clone
+      </a>
+      <div className="divider"></div>
+      <a
+        className="projectLink"
+        href="https://www.newscientist.com/article/2286218-ancient-lake-in-marss-gale-crater-may-have-actually-been-a-small-pond/"
+        target="_blank"
+      >
+        New Scientist - Original
+      </a>
+      <a
+        className="projectLink"
+        href="https://nickcascella.github.io/NewScientistWebpageClone/"
+        target="_blank"
+      >
+        New Scientist - Clone
       </a>
     </div>
   );
@@ -115,14 +132,55 @@ function TwitterClone() {
             username, bio, profile picture, and profile background image.
           </li>
           <li>Follow/Unfollow other users and viewing their profiles.</li>
+          <li>
+            Was designed only for display 1200px or larger, due to being made
+            before learning about responsive design.
+          </li>
         </ul>
       </p>
-      <a className="projectLink" href="" target="_blank">
+      <a
+        className="projectLink"
+        href="https://twitter-clone-848fe.web.app/"
+        target="_blank"
+      >
         Twitter Link
       </a>
     </div>
   );
 }
 
+function WhereIsWaldoGame() {
+  return (
+    <div className="projectsPage specificProject fadeIn">
+      <h2>Where's Waldo Game</h2>
+      <h3>Project Description</h3>
+      <p>
+        Is similar to the game Where's Waldo, where you must find 3 characters
+        as fast as possible in order to get the bes score! This project uses
+        React front-end and a Firebase hosted back-end. This was my first
+        project using a back-end for data storage, where in which is keeps data
+        on user highscores and character positions.
+        <ul className="projectKeyFeatures">
+          <li>
+            This was my first project using a back-end for data storage, where
+            in which it keeps data on user highscores and character positions.
+          </li>
+          <li>
+            Was designed only for displays 1650px or larger, due to how large
+            the actual game "board" is.
+          </li>
+        </ul>
+      </p>
+      <a
+        className="projectLink"
+        href="https://where-is-waldo-77531.web.app/"
+        target="_blank"
+      >
+        Where's Waldo?!
+      </a>
+    </div>
+  );
+}
+
 export default Projects;
-export { TwitterClone, SmashingMagazineClone };
+export { TwitterClone, SmashingMagazineClone, WhereIsWaldoGame };

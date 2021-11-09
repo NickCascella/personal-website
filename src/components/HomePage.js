@@ -9,11 +9,16 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
+import { useCallback } from "react";
 //COMPONENTS
 import ScrollToTop from "./Scroll";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
-import { SmashingMagazineClone, TwitterClone } from "./Projects";
+import {
+  SmashingMagazineClone,
+  TwitterClone,
+  WhereIsWaldoGame,
+} from "./Projects";
 
 //IMAGES
 import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
@@ -21,6 +26,12 @@ import emailIcon from "../assets/images/homePage/emailIcon.PNG";
 import linkedInIcon from "../assets/images/homePage/linkedInIcon.PNG";
 
 function HomePage() {
+  const chatPreviewRef = useCallback((node) => {
+    if (node) {
+      node.scrollTo({ top: node.scrollHeight, behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div className="homePage fadeInBasic">
       <Router>
@@ -75,8 +86,7 @@ function HomePage() {
             </Link>
           </ul>
         </nav>
-        <section className="displayedPage">
-          <ScrollToTop />
+        <section className="displayedPage" ref={chatPreviewRef}>
           <Switch>
             <Route exact path="/personal-website">
               <Redirect to="/home/About-Me" />
@@ -92,6 +102,9 @@ function HomePage() {
             </Route>
             <Route path="/home/Projects/SmashingMagazine">
               <SmashingMagazineClone></SmashingMagazineClone>
+            </Route>
+            <Route path="/home/Projects/WhereIsWaldo">
+              <WhereIsWaldoGame></WhereIsWaldoGame>
             </Route>
           </Switch>
         </section>
