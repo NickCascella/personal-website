@@ -1,7 +1,9 @@
 import "../components/AboutMe.css";
 import "../components/sharedFeatures.css";
 
-function AboutMe() {
+function AboutMe(props) {
+  const currentTheme = props.currentTheme;
+
   return (
     <div className="aboutMePage fadeIn">
       <h2>About Me</h2>
@@ -18,7 +20,11 @@ function AboutMe() {
         </li>
         <li>
           Currently enrolled in{" "}
-          <a href="https://www.theodinproject.com/" target="_blank">
+          <a
+            href="https://www.theodinproject.com/"
+            target="_blank"
+            style={{ color: currentTheme.color }}
+          >
             The Odin Project.
           </a>{" "}
           An open source full stack coding curriculum wtih 1000+ hours worth of
@@ -31,6 +37,7 @@ function AboutMe() {
                 className="completed"
                 href="https://www.theodinproject.com/paths/foundations?"
                 target="_blank"
+                style={{ color: currentTheme.color }}
               >
                 Foundations
               </a>
@@ -47,6 +54,7 @@ function AboutMe() {
               <a
                 href="https://www.theodinproject.com/paths/full-stack-javascript?"
                 target="_blank"
+                style={{ color: currentTheme.color }}
               >
                 Full Stack JS
               </a>
@@ -61,6 +69,7 @@ function AboutMe() {
                 <a
                   href="https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript"
                   target="_blank"
+                  style={{ color: currentTheme.color }}
                 >
                   Front-end
                 </a>
@@ -78,6 +87,7 @@ function AboutMe() {
                 <a
                   href="https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css"
                   target="_blank"
+                  style={{ color: currentTheme.color }}
                 >
                   Design
                 </a>
@@ -98,6 +108,7 @@ function AboutMe() {
                 <a
                   href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs"
                   target="_blank"
+                  style={{ color: currentTheme.color }}
                 >
                   Back-end
                 </a>

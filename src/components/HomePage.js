@@ -9,7 +9,6 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
-import { useCallback } from "react";
 //COMPONENTS
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
@@ -19,16 +18,22 @@ import { RenderProject } from "./Projects";
 import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
 import emailIcon from "../assets/images/homePage/emailIcon.PNG";
 import linkedInIcon from "../assets/images/homePage/linkedInIcon.PNG";
+import { useState } from "react";
 
-function HomePage() {
-  const chatPreviewRef = useCallback((node) => {
-    if (node) {
-      node.scrollTo({ top: node.scrollHeight, behavior: "smooth" });
-    }
-  }, []);
+function HomePage(props) {
+  const currentTheme = props.currentTheme;
+
+  const checkSpecialStyling = (hover) => {
+    if (
+      (currentTheme.color === "white" && hover === "true") ||
+      currentTheme.color === "black"
+    ) {
+      return "black";
+    } else return "white";
+  };
 
   return (
-    <div className="homePage fadeInBasic">
+    <div className="homePage fadeInBasic" style={{ color: currentTheme.color }}>
       <Router>
         <nav className="siteNavigation fadeInLeft">
           <h1>Nicholas Cascella</h1>
@@ -37,6 +42,7 @@ function HomePage() {
               <a
                 href="https://github.com/NickCascella?tab=repositories"
                 target="_blank"
+                style={{ color: currentTheme.color }}
               >
                 <img
                   className="socialMediaIcon"
@@ -50,6 +56,7 @@ function HomePage() {
               <a
                 href="mailto:cascella3509@gmail.com?subject=Congratulations.%20You%20got%20the%20job!"
                 target="_blank"
+                style={{ color: currentTheme.color }}
               >
                 <img
                   className="socialMediaIcon"
@@ -62,7 +69,7 @@ function HomePage() {
               </a>
             </li>
             <li className="socialMediaListItem">
-              <a href="" target="_blank">
+              <a href="" target="_blank" style={{ color: currentTheme.color }}>
                 <img
                   className="socialMediaIcon"
                   src={linkedInIcon}
@@ -74,10 +81,30 @@ function HomePage() {
           </ul>
           <ul className="pageLinks">
             <Link to="/home/About-Me">
-              <li>About Me</li>
+              <li
+                style={{ color: currentTheme.color }}
+                onMouseOver={(e) => {
+                  e.target.style.color = checkSpecialStyling("true");
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = checkSpecialStyling("false");
+                }}
+              >
+                About Me
+              </li>
             </Link>
             <Link to="/home/Projects">
-              <li>Projects</li>
+              <li
+                style={{ color: currentTheme.color }}
+                onMouseOver={(e) => {
+                  e.target.style.color = checkSpecialStyling("true");
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = checkSpecialStyling("false");
+                }}
+              >
+                Projects
+              </li>
             </Link>
           </ul>
         </nav>
@@ -87,13 +114,16 @@ function HomePage() {
               <Redirect to="/home/About-Me" />
             </Route>
             <Route path="/home/About-Me">
-              <AboutMe></AboutMe>
+              <AboutMe currentTheme={currentTheme}></AboutMe>
             </Route>
             <Route exact path="/home/Projects">
-              <Projects></Projects>
+              <Projects
+                currentTheme={currentTheme}
+                specialStyling={checkSpecialStyling}
+              ></Projects>
             </Route>
             <Route path="/home/Projects/">
-              <RenderProject></RenderProject>
+              <RenderProject currentTheme={currentTheme}></RenderProject>
             </Route>
             s
           </Switch>

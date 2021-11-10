@@ -6,6 +6,7 @@ html {
 
 a {
   text-decoration: none;
+  font-style: normal;
   color: black;
 }
 
@@ -81,7 +82,6 @@ BLOBS
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
 
 .area {
-  background: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 100%;
   z-index: -1000;
@@ -110,7 +110,7 @@ BLOBS
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(184, 77, 77, 0.446);
+  background: rgba(77, 132, 184, 0.446);
   animation: animate 25s linear infinite;
   bottom: -150px;
 }

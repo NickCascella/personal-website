@@ -4,8 +4,17 @@ import "../components/sharedFeatures.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import projectsData from "../assets/images/projectsInfo";
+import { useEffect } from "react";
 
-function Projects() {
+function Projects(props) {
+  const currentTheme = props.currentTheme;
+  const checkSpecialStyling = props.specialStyling;
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log(checkSpecialStyling);
+  });
+
   return (
     <div className="projectsPage fadeIn">
       <h2>Projects</h2>
@@ -25,7 +34,15 @@ function Projects() {
             state: "smashingMagazineAndNewScientist",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">
               New Scientist / Smashing Magazine Webpage Clone
             </span>{" "}
@@ -40,7 +57,15 @@ function Projects() {
             state: "twitterClone",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">
               Twitter Clone<i>ish</i>
             </span>
@@ -56,7 +81,15 @@ function Projects() {
             state: "whereIsWaldo",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">Where's Waldo</span>{" "}
             <span className="projectLanguage">
               React / JS / HTML / CSS / Firebase
@@ -69,7 +102,15 @@ function Projects() {
             state: "odinShop",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">Odin Shop</span>{" "}
             <span className="projectLanguage">React / JS / HTML / CSS</span>
           </li>
@@ -80,7 +121,15 @@ function Projects() {
             state: "memoryGame",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">Memory Game</span>{" "}
             <span className="projectLanguage">React / JS / HTML / CSS</span>
           </li>
@@ -91,7 +140,15 @@ function Projects() {
             state: "battleship",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">Battleship</span>{" "}
             <span className="projectLanguage">JS / HTML / CSS</span>
           </li>
@@ -102,7 +159,15 @@ function Projects() {
             state: "weatherApp",
           }}
         >
-          <li>
+          <li
+            style={{ color: currentTheme.color }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("true");
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = checkSpecialStyling("false");
+            }}
+          >
             <span className="projectName">Weather App</span>{" "}
             <span className="projectLanguage">JS / HTML / CSS</span>
           </li>
@@ -112,9 +177,10 @@ function Projects() {
   );
 }
 
-const RenderProject = () => {
+const RenderProject = (props) => {
   const location = useLocation();
   const specificProject = projectsData[location.state];
+  const currentTheme = props.currentTheme;
   const uniqueId = () => {
     return Math.random() * 1000000;
   };
@@ -136,6 +202,7 @@ const RenderProject = () => {
         return (
           <a
             className="projectLink"
+            style={{ color: currentTheme.color }}
             href={linkData[1]}
             target="_blank"
             key={uniqueId()}
