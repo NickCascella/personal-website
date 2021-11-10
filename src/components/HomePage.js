@@ -22,6 +22,15 @@ import { useState } from "react";
 
 function HomePage(props) {
   const currentTheme = props.currentTheme;
+  const setDarkThemeOn = props.setDarkThemeOn;
+
+  const themeButtonDisplay = () => {
+    if (currentTheme.color === "white") {
+      return "Dark Theme";
+    } else {
+      return "Light Theme";
+    }
+  };
 
   const checkSpecialStyling = (hover) => {
     if (
@@ -107,6 +116,18 @@ function HomePage(props) {
               </li>
             </Link>
           </ul>
+          <div className="themeSwitchingContainer">
+            <div className="switchTitle">{themeButtonDisplay()}</div>
+            <label class="switch">
+              <input
+                type="checkbox"
+                onChange={(e) => {
+                  setDarkThemeOn(e.target.checked);
+                }}
+              ></input>
+              <span class="slider round"></span>
+            </label>
+          </div>
         </nav>
         <section className="displayedPage">
           <Switch>

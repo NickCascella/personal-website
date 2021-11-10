@@ -25,7 +25,10 @@ function App() {
 
   return (
     <div className="app">
-      <HomePage currentTheme={currentTheme()}></HomePage>
+      <HomePage
+        currentTheme={currentTheme()}
+        setDarkThemeOn={setDarkThemeOn}
+      ></HomePage>
       <div className="area" style={currentTheme()}>
         <ul className="circles">
           <li></li>
