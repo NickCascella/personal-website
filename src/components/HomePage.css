@@ -61,6 +61,11 @@
   width: 90%;
 }
 
+.pageLinksUnderline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .themeSwitchingContainer {
   padding-top: 5px;
   padding-left: 4px;

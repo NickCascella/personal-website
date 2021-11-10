@@ -41,7 +41,7 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">
+            <span className="projectName pageLinksUnderline">
               New Scientist / Smashing Magazine Webpage Clone
             </span>{" "}
             <span className="projectLanguage">JS / HTML / CSS</span>{" "}
@@ -64,8 +64,8 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">
-              Twitter Clone<i>ish</i>
+            <span className="projectName pageLinksUnderline">
+              Twitter Clone
             </span>
             <span className="projectLanguage">
               React / JS / HTML / CSS / Firebase
@@ -88,7 +88,9 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">Where's Waldo</span>{" "}
+            <span className="projectName pageLinksUnderline">
+              Where's Waldo
+            </span>{" "}
             <span className="projectLanguage">
               React / JS / HTML / CSS / Firebase
             </span>
@@ -109,7 +111,7 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">Odin Shop</span>{" "}
+            <span className="projectName pageLinksUnderline">Odin Shop</span>{" "}
             <span className="projectLanguage">React / JS / HTML / CSS</span>
           </li>
         </Link>
@@ -128,7 +130,7 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">Memory Game</span>{" "}
+            <span className="projectName pageLinksUnderline">Memory Game</span>{" "}
             <span className="projectLanguage">React / JS / HTML / CSS</span>
           </li>
         </Link>
@@ -147,7 +149,7 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">Battleship</span>{" "}
+            <span className="projectName pageLinksUnderline">Battleship</span>{" "}
             <span className="projectLanguage">JS / HTML / CSS</span>
           </li>
         </Link>
@@ -166,7 +168,7 @@ function Projects(props) {
               e.currentTarget.style.color = checkSpecialStyling("false");
             }}
           >
-            <span className="projectName">Weather App</span>{" "}
+            <span className="projectName pageLinksUnderline">Weather App</span>{" "}
             <span className="projectLanguage">JS / HTML / CSS</span>
           </li>
         </Link>

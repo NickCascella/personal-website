@@ -119,26 +119,26 @@ function HomePage(props) {
               <li
                 style={{ color: currentTheme.color }}
                 onMouseOver={(e) => {
-                  e.target.style.color = checkSpecialStyling("true");
+                  e.currentTarget.style.color = checkSpecialStyling("true");
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = checkSpecialStyling("false");
+                  e.currentTarget.style.color = checkSpecialStyling("false");
                 }}
               >
-                About Me
+                <span className="pageLinksUnderline">About Me</span>
               </li>
             </Link>
             <Link to="/home/Projects">
               <li
                 style={{ color: currentTheme.color }}
                 onMouseOver={(e) => {
-                  e.target.style.color = checkSpecialStyling("true");
+                  e.currentTarget.style.color = checkSpecialStyling("true");
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = checkSpecialStyling("false");
+                  e.currentTarget.style.color = checkSpecialStyling("false");
                 }}
               >
-                Projects
+                <span className="pageLinksUnderline"> Projects </span>
               </li>
             </Link>
           </ul>
