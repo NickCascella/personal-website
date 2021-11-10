@@ -20,7 +20,7 @@ function AboutMe() {
           Currently enrolled in{" "}
           <a href="https://www.theodinproject.com/" target="_blank">
             The Odin Project.
-          </a>
+          </a>{" "}
           An open source full stack coding curriculum wtih 1000+ hours worth of
           learning material and projects updated almost daily by a driven
           community. It is broken up into various sections including, but not
@@ -102,7 +102,7 @@ function AboutMe() {
                   Back-end
                 </a>
                 <p>
-                  To quote The Odin Project{" "}
+                  <i>To quote The Odin Project </i>
                   <span className="projectRef">
                     "Learn how to fully craft your site's backend using Express,
                     the most popular back-end JavaScript framework! You will

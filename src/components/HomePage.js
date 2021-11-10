@@ -11,14 +11,9 @@ import {
 } from "react-router-dom";
 import { useCallback } from "react";
 //COMPONENTS
-import ScrollToTop from "./Scroll";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
-import {
-  SmashingMagazineClone,
-  TwitterClone,
-  WhereIsWaldoGame,
-} from "./Projects";
+import { RenderProject } from "./Projects";
 
 //IMAGES
 import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
@@ -86,7 +81,7 @@ function HomePage() {
             </Link>
           </ul>
         </nav>
-        <section className="displayedPage" ref={chatPreviewRef}>
+        <section className="displayedPage">
           <Switch>
             <Route exact path="/personal-website">
               <Redirect to="/home/About-Me" />
@@ -97,15 +92,10 @@ function HomePage() {
             <Route exact path="/home/Projects">
               <Projects></Projects>
             </Route>
-            <Route path="/home/Projects/TwitterClone">
-              <TwitterClone></TwitterClone>
+            <Route path="/home/Projects/">
+              <RenderProject></RenderProject>
             </Route>
-            <Route path="/home/Projects/SmashingMagazine">
-              <SmashingMagazineClone></SmashingMagazineClone>
-            </Route>
-            <Route path="/home/Projects/WhereIsWaldo">
-              <WhereIsWaldoGame></WhereIsWaldoGame>
-            </Route>
+            s
           </Switch>
         </section>
       </Router>

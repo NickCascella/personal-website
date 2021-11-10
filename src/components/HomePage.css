@@ -5,10 +5,8 @@ a {
 .homePage {
   display: flex;
   width: 60%;
-  height: 100%;
-  margin-top: 5em;
+  margin: 5em 0;
   font-family: "Raleway", sans-serif;
-  overflow-y: scroll;
 }
 
 .homePage::-webkit-scrollbar {
@@ -73,7 +71,7 @@ DISPLAYED CONTENT
 
 .displayedPage {
   width: 65%;
-  padding-bottom: 8em;
+  overflow-x: hidden;
 }
 
 /*
@@ -86,7 +84,6 @@ LAYOUT CHANGES
   .homePage {
     width: 80%;
     flex-direction: column;
-    height: 95vh;
   }
   .siteNavigation {
     border-right: none;
