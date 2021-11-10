@@ -3,9 +3,13 @@ import "../components/sharedFeatures.css";
 
 function AboutMe(props) {
   const currentTheme = props.currentTheme;
+  const changeBorderColor = props.borderTheme;
 
   return (
-    <div className="aboutMePage fadeIn">
+    <div
+      className="aboutMePage fadeIn"
+      style={{ borderColor: changeBorderColor() }}
+    >
       <h2>About Me</h2>
       <ul className="aboutMeList">
         <li>

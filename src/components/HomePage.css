@@ -43,6 +43,7 @@
   width: 16px;
   height: 16px;
   font-weight: bold;
+  background-size: cover;
 }
 
 .pageLinks {
@@ -110,7 +111,7 @@
 }
 
 input:checked + .slider {
-  background-color: rgba(24, 24, 24, 0.446);
+  background-color: rgba(236, 236, 236, 0.546);
 }
 
 input:focus + .slider {
@@ -151,7 +152,7 @@ LAYOUT CHANGES
 
 @media only screen and (max-width: 1100px) {
   .homePage {
-    width: 80%;
+    width: 90%;
     flex-direction: column;
   }
   .siteNavigation {
@@ -178,14 +179,4 @@ LAYOUT CHANGES
   .homePage {
     width: 45%;
   }
-}
-
-/*
-
-DARK THEMES
-
-*/
-
-.linksDarkTheme {
-  color: aliceblue;
 }

@@ -4,19 +4,17 @@ import "../components/sharedFeatures.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import projectsData from "../assets/images/projectsInfo";
-import { useEffect } from "react";
 
 function Projects(props) {
   const currentTheme = props.currentTheme;
   const checkSpecialStyling = props.specialStyling;
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    console.log(checkSpecialStyling);
-  });
+  const changeBorderColor = props.borderTheme;
 
   return (
-    <div className="projectsPage fadeIn">
+    <div
+      className="projectsPage fadeIn"
+      style={{ borderColor: changeBorderColor() }}
+    >
       <h2>Projects</h2>
       <p>
         Here is a list of some of the projects I have completed up until this
@@ -181,6 +179,7 @@ const RenderProject = (props) => {
   const location = useLocation();
   const specificProject = projectsData[location.state];
   const currentTheme = props.currentTheme;
+  const changeBorderColor = props.borderTheme;
   const uniqueId = () => {
     return Math.random() * 1000000;
   };
@@ -189,7 +188,10 @@ const RenderProject = (props) => {
   }
 
   return (
-    <div className="projectsPage specificProject fadeIn">
+    <div
+      className="projectsPage specificProject fadeIn"
+      style={{ borderColor: changeBorderColor() }}
+    >
       <h2>{specificProject.title}</h2>
       <h3>Project Description</h3>
       <p>{specificProject.description}</p>

@@ -5,12 +5,12 @@ import HomePage from "./components/HomePage";
 function App() {
   const darkTheme = {
     color: "white",
-    backgroundColor: "rgba(0,0,0,0.8)",
+    backgroundColor: "rgba(0,0,0,1)",
   };
 
   const lightTheme = {
     color: "black",
-    backgroundColor: "rgba(255,255,255,0.8)",
+    backgroundColor: "rgba(255,255,255, 0.9)",
   };
 
   const [darkThemeOn, setDarkThemeOn] = useState(false);

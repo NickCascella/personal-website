@@ -15,9 +15,12 @@ import Projects from "./Projects";
 import { RenderProject } from "./Projects";
 
 //IMAGES
-import gitHubIcon from "../assets/images/homePage/GitHubLogo.png";
+import gitHubLightIcon from "../assets/images/homePage/GithubLightMode.PNG";
+import gitHubDarkIcon from "../assets/images/homePage/GithubDarkMode.PNG";
 import emailIcon from "../assets/images/homePage/emailIcon.PNG";
-import linkedInIcon from "../assets/images/homePage/linkedInIcon.PNG";
+import linkedInLightIcon from "../assets/images/homePage/LinkedInLightMode.PNG";
+import linkedInDarkIcon from "../assets/images/homePage/LinkedInDarkMode.PNG";
+
 import { useState } from "react";
 
 function HomePage(props) {
@@ -41,10 +44,33 @@ function HomePage(props) {
     } else return "white";
   };
 
+  const iconPicker = (iconNeeded) => {
+    if (currentTheme.color === "white" && iconNeeded === "github") {
+      return gitHubDarkIcon;
+    } else if (iconNeeded === "github") {
+      return gitHubLightIcon;
+    } else if (currentTheme.color === "white" && iconNeeded === "linkedIn") {
+      return linkedInDarkIcon;
+    } else if (iconNeeded === "linkedIn") {
+      return linkedInLightIcon;
+    }
+  };
+
+  const changeBorderColor = () => {
+    if (currentTheme.color === "white") {
+      return "white";
+    } else {
+      return "black";
+    }
+  };
+
   return (
     <div className="homePage fadeInBasic" style={{ color: currentTheme.color }}>
       <Router>
-        <nav className="siteNavigation fadeInLeft">
+        <nav
+          className="siteNavigation fadeInLeft"
+          style={{ borderColor: changeBorderColor() }}
+        >
           <h1>Nicholas Cascella</h1>
           <ul className="socialMediaLinksList">
             <li className="socialMediaListItem">
@@ -55,7 +81,7 @@ function HomePage(props) {
               >
                 <img
                   className="socialMediaIcon"
-                  src={gitHubIcon}
+                  src={iconPicker("github")}
                   alt="GitHub Icon"
                 ></img>{" "}
                 <span className="socialMediaName">: NickCascella</span>
@@ -81,7 +107,7 @@ function HomePage(props) {
               <a href="" target="_blank" style={{ color: currentTheme.color }}>
                 <img
                   className="socialMediaIcon"
-                  src={linkedInIcon}
+                  src={iconPicker("linkedIn")}
                   alt="linkedIn Icon"
                 ></img>
                 <span className="socialMediaName">: NickCascella</span>
@@ -135,16 +161,23 @@ function HomePage(props) {
               <Redirect to="/home/About-Me" />
             </Route>
             <Route path="/home/About-Me">
-              <AboutMe currentTheme={currentTheme}></AboutMe>
+              <AboutMe
+                currentTheme={currentTheme}
+                borderTheme={changeBorderColor}
+              ></AboutMe>
             </Route>
             <Route exact path="/home/Projects">
               <Projects
+                borderTheme={changeBorderColor}
                 currentTheme={currentTheme}
                 specialStyling={checkSpecialStyling}
               ></Projects>
             </Route>
             <Route path="/home/Projects/">
-              <RenderProject currentTheme={currentTheme}></RenderProject>
+              <RenderProject
+                currentTheme={currentTheme}
+                borderTheme={changeBorderColor}
+              ></RenderProject>
             </Route>
             s
           </Switch>
