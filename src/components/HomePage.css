@@ -61,11 +61,6 @@
   width: 90%;
 }
 
-.pageLinksUnderline {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 .themeSwitchingContainer {
   padding-top: 5px;
   padding-left: 4px;
@@ -159,6 +154,7 @@ LAYOUT CHANGES
   .homePage {
     width: 90%;
     flex-direction: column;
+    margin: 2em 0;
   }
   .siteNavigation {
     border-right: none;

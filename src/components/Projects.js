@@ -202,6 +202,11 @@ const RenderProject = (props) => {
           return <li key={uniqueId()}>{feature}</li>;
         })}
       </ul>
+      <ul className="projectKeyFeatures projectDownsides">
+        {specificProject.downsides.map((feature) => {
+          return <li key={uniqueId()}>{feature}</li>;
+        })}
+      </ul>
       {specificProject.links.map((linkData) => {
         return (
           <a

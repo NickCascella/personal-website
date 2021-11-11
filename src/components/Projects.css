@@ -53,6 +53,10 @@ INDIVIDUAL PROJECTS
   padding-right: 0.2em;
 }
 
+.projectDownsides li:before {
+  content: "X";
+}
+
 .divider {
   width: 50%;
   margin: 5px auto;

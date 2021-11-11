@@ -144,14 +144,14 @@ function HomePage(props) {
           </ul>
           <div className="themeSwitchingContainer">
             <div className="switchTitle">{themeButtonDisplay()}</div>
-            <label class="switch">
+            <label className="switch">
               <input
                 type="checkbox"
                 onChange={(e) => {
                   setDarkThemeOn(e.target.checked);
                 }}
               ></input>
-              <span class="slider round"></span>
+              <span className="slider round"></span>
             </label>
           </div>
         </nav>

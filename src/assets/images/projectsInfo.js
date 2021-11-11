@@ -4,9 +4,14 @@ const projectsData = {
     description:
       "Project's meant to test responsive design as well as layout replication of Smashing Magazine and New Scientist",
     features: [
+      "Was able to emulate most features and a similar look to the original",
       "Responsively designed with flexbox and media queries for device dimensions",
-      " Taught better layout design choices and help developed new ideas and standards for future projects",
+      "Taught better layout design choices and help developed new ideas and standards for future projects",
       "Has mobile support",
+    ],
+    downsides: [
+      "Not all design choices were replicated",
+      "All CSS styling is in one file, underestimated how large the project file would become. A takeaway for future projects.",
     ],
     links: [
       ["Smashing Magazine - Original", "https://www.smashingmagazine.com/"],
@@ -31,10 +36,13 @@ const projectsData = {
     features: [
       "Sign in using your google account.",
       "Post tweets to a global feed.",
-      " Interact with other user tweets by liking, retweeting, and starting reply chains.",
+      "Interact with other user tweets by liking, retweeting, and starting reply chains.",
       "Profile edits that alter previous tweets by the user such as username, bio, profile picture, and profile background image.",
       "Follow/Unfollow other users and viewing their profiles.",
-      "Was designed only for display 1200px or larger, due to being made before learning about responsive design.",
+    ],
+    downsides: [
+      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
+      "First big application, code base is not the neatest. Learned a lot of organziational tips for future projects",
     ],
     links: [["Twitter Clone", "https://twitter-clone-848fe.web.app/"]],
   },
@@ -46,6 +54,7 @@ const projectsData = {
       "With this being my first time using a Back-end service, this project taught me how to store and retrieve some basic information when needed. Such as data on user highscores and character positions.",
       "Was designed only for displays 1650px or larger, due to how large the actual game is.",
     ],
+    downsides: ["Cannot play this game on small devices"],
     links: [["Where's Waldo?!", "https://where-is-waldo-77531.web.app/"]],
   },
   odinShop: {
@@ -59,6 +68,9 @@ const projectsData = {
       "Uses api calls to retrieve data on various pokemon to be used by the app.",
       "Uses react router to dynamically load into pages based off which pokemon or item the user has clicked.",
     ],
+    downsides: [
+      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
+    ],
     links: [["Odin Shop", "https://odin-shop.web.app/"]],
   },
   memoryGame: {
@@ -68,6 +80,10 @@ const projectsData = {
     features: [
       "Taught me the basics of React.",
       "Taught me the differences between class and functional components.",
+    ],
+    downsides: [
+      "Poor CSS styling, was meant to be demonstrate basics of React.",
+      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
     ],
     links: [["Memory Game", "https://nickcascella.github.io/Memory-Game/"]],
   },
@@ -79,6 +95,10 @@ const projectsData = {
       "Taught me the basics of Webpack.",
       "Introduced me to the nature of game mechanics for more complicated games.",
     ],
+    downsides: [
+      "Showed me how complicated a game can become without a good framework to handle things such as state like React.",
+      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
+    ],
     links: [["Battleship", "https://nickcascella.github.io/Memory-Game/"]],
   },
   weatherApp: {
@@ -86,6 +106,10 @@ const projectsData = {
     description:
       "My first functional App. Simply returns the weather and forecast for the location specified and provides the weekly forecast. This uses a free API and as such there are restrictions on what exactly you can search and what data you canget back. This app also allows you to convert from the metric system to imperial and vice versa.",
     features: ["Introduced me to api calls"],
+    downsides: [
+      "Does not have great search functionallity",
+      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
+    ],
     links: [["Weather App", "https://nickcascella.github.io/weather_app/"]],
   },
 };
