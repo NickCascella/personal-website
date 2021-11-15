@@ -19,8 +19,10 @@ function AboutMe(props) {
         </li>
         <li>
           Worked in the hospitality/tourism sector after graduation in Niagara
-          Falls, ON. Became apparent it was not the career I was after and soon
-          found a great interest in coding!
+          Falls, ON. Due do Covid-19 the industry has changed quite dramaically
+          and as a result drove me to try developing a skill in another
+          profession that I have been always curious about. This has led me to
+          pursue coding!
         </li>
         <li>
           Currently enrolled in{" "}
@@ -29,9 +31,9 @@ function AboutMe(props) {
             target="_blank"
             style={{ color: currentTheme.color }}
           >
-            The Odin Project.
+            The Odin Project,
           </a>{" "}
-          An open source full stack coding curriculum wtih 1000+ hours worth of
+          an open source full stack coding curriculum wtih 1000+ hours worth of
           learning material and projects updated almost daily by a driven
           community. It is broken up into various sections including, but not
           limited to:
@@ -46,12 +48,13 @@ function AboutMe(props) {
                 Foundations
               </a>
               <p>
-                Taught the fundamentals of JS, GIT, and HTML/CSS. Used projects
-                such as{" "}
+                Taught the fundamentals of JS, GIT, and HTML/CSS through
+                projects such as{" "}
                 <span className="projectRef">Rock, Paper, Scissors</span> and{" "}
-                <span className="projectRef">Etch-Sketch</span> to show layouts,
+                <span className="projectRef">Etch-Sketch</span>
+                {/* to show layouts,
                 how to store and host projects on GitHub, and how JS can in turn
-                manipulate the page based on user inputs.
+                manipulate the page based on user inputs. */}
               </p>
             </li>
             <li>
@@ -78,12 +81,14 @@ function AboutMe(props) {
                   Front-end
                 </a>
                 <p>
-                  Front-end focuses heavily on more in depth projects with JS
+                  {/* Front-end focuses heavily on more in depth projects with JS
                   and React while using Firebase as the back-end until you
                   progress to their back-end section. This includes projects
-                  such as my
+                  such as my */}
+                  Goes in depth on material for React, JS, and Firebase through
+                  projects such as
                   <span className="projectRef"> Twitter Clone</span> or{" "}
-                  <span className="projectRef">Where's Waldo</span> type game.
+                  <span className="projectRef">Where's Waldo</span>.
                 </p>
               </li>
               <li>
@@ -97,12 +102,12 @@ function AboutMe(props) {
                 </a>
               </li>
               <p>
-                The design portion focuses on topics such as HTML structrue and
-                using proper semantics, Accessibility, and the User
-                Interface/Experience. Projects such as my{" "}
+                Focuses on topics such as HTML structrue using proper semantics,
+                Accessibility, and the User Interface/Experience. Some such
+                concepts are applied here in as my{" "}
                 <span className="projectRef">New Scientist</span> and{" "}
                 <span className="projectRef">Smash Magazine</span> website
-                clones wih responsive deisgn test some these concepts.{" "}
+                clones.{" "}
                 <span className="projectRef">
                   Note: I am currently on this part of the course.
                 </span>
@@ -117,12 +122,12 @@ function AboutMe(props) {
                   Back-end
                 </a>
                 <p>
-                  <i>To quote The Odin Project </i>
+                  To quote The Odin Project{" "}
                   <span className="projectRef">
                     "Learn how to fully craft your site's backend using Express,
                     the most popular back-end JavaScript framework! You will
-                    also learn how to use a non-relational database, MongoDB."{" "}
-                  </span>
+                    also learn how to use a non-relational database, MongoDB."
+                  </span>{" "}
                   I have not yet reached this part of the curriculum but to
                   learn more click the{" "}
                   <span className="projectRef">Back-end</span> tag above as I

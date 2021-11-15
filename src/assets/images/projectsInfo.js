@@ -2,15 +2,15 @@ const projectsData = {
   smashingMagazineAndNewScientist: {
     title: "Smashing Magazine & New Scientist Clones",
     description:
-      "Project's meant to test responsive design as well as layout replication of Smashing Magazine and New Scientist",
+      "Project's meant to test responsive design as well as layout replication of Smashing Magazine and New Scientist.",
     features: [
-      "Was able to emulate most features and a similar look to the original",
-      "Responsively designed with flexbox and media queries for device dimensions",
-      "Taught better layout design choices and help developed new ideas and standards for future projects",
-      "Has mobile support",
+      "Was able to emulate most features and a similar look to the original.",
+      "Responsively designed with flexbox and media queries for varying device dimensions.",
+      "Taught better layout design choices and help developed new ideas and standards for future projects.",
+      "Has mobile support,",
     ],
     downsides: [
-      "Not all design choices were replicated",
+      "Not all design choices were replicated.",
       "All CSS styling is in one file, underestimated how large the project file would become. A takeaway for future projects.",
     ],
     links: [
@@ -99,7 +99,7 @@ const projectsData = {
       "Showed me how complicated a game can become without a good framework to handle things such as state like React.",
       "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~1600px wide.",
     ],
-    links: [["Battleship", "https://nickcascella.github.io/Memory-Game/"]],
+    links: [["Battleship", "https://nickcascella.github.io/Battleship/"]],
   },
   weatherApp: {
     title: "Weather App",

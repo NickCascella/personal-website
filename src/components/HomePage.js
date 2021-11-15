@@ -21,8 +21,6 @@ import emailIcon from "../assets/images/homePage/emailIcon.PNG";
 import linkedInLightIcon from "../assets/images/homePage/LinkedInLightMode.PNG";
 import linkedInDarkIcon from "../assets/images/homePage/LinkedInDarkMode.PNG";
 
-import { useState } from "react";
-
 function HomePage(props) {
   const currentTheme = props.currentTheme;
   const setDarkThemeOn = props.setDarkThemeOn;
@@ -104,7 +102,11 @@ function HomePage(props) {
               </a>
             </li>
             <li className="socialMediaListItem">
-              <a href="" target="_blank" style={{ color: currentTheme.color }}>
+              <a
+                href="https://www.linkedin.com/in/nick-cascella-a9546b14b/"
+                target="_blank"
+                style={{ color: currentTheme.color }}
+              >
                 <img
                   className="socialMediaIcon"
                   src={iconPicker("linkedIn")}
