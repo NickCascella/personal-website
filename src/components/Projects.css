@@ -45,6 +45,7 @@ INDIVIDUAL PROJECTS
 
 .projectKeyFeatures li {
   width: 100%;
+  padding-top: 5px;
 }
 
 .projectKeyFeatures li:before {

@@ -85,8 +85,8 @@ function AboutMe(props) {
                   and React while using Firebase as the back-end until you
                   progress to their back-end section. This includes projects
                   such as my */}
-                  Goes in depth on material for React, JS, and Firebase through
-                  projects such as
+                  Goes in depth on React, JS, and Firebase through projects such
+                  as
                   <span className="projectRef"> Twitter Clone</span> or{" "}
                   <span className="projectRef">Where's Waldo</span>.
                 </p>
@@ -108,9 +108,6 @@ function AboutMe(props) {
                 <span className="projectRef">New Scientist</span> and{" "}
                 <span className="projectRef">Smash Magazine</span> website
                 clones.{" "}
-                <span className="projectRef">
-                  Note: I am currently on this part of the course.
-                </span>
               </p>
               <li>
                 {" "}
@@ -122,16 +119,11 @@ function AboutMe(props) {
                   Back-end
                 </a>
                 <p>
-                  To quote The Odin Project{" "}
-                  <span className="projectRef">
-                    "Learn how to fully craft your site's backend using Express,
-                    the most popular back-end JavaScript framework! You will
-                    also learn how to use a non-relational database, MongoDB."
-                  </span>{" "}
-                  I have not yet reached this part of the curriculum but to
-                  learn more click the{" "}
-                  <span className="projectRef">Back-end</span> tag above as I
-                  will be completing it in the near future.
+                  Up until this point I have mostly used and done all database
+                  and server hosting on Firebase, and all server requests in the
+                  front-end. I am currently now learning how to create, use, and
+                  properly write server side handling of requests, as well as my
+                  own server with Node.js, Express, Mongoose, and MongoDb.
                 </p>
               </li>
             </ul>

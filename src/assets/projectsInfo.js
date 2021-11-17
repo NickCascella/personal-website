@@ -1,4 +1,28 @@
 const projectsData = {
+  puddl: {
+    title: "Puddl",
+    description:
+      "My first project involving collaboration with other developers. Currently this is going to be a social app where you are placed in random groups with X amount of people, can chat about various topics and play premade games in the group. The first feature I got to work on was the avatar creation feature for this app.",
+    features: [
+      "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general throug my team members.",
+      "Satisifed the requirements of what was asked of me in terms of functionallity.",
+      "Got to work in and learn about Next JS, which is built on React and Node.",
+      "Got to learn about SASS and the benefits it has over standard CSS.",
+      "Got to work with the external library Openpeeps, to allow the users to create custom avatars from a good selection of choices.",
+      "My first instance of using server-side handling to create the requests. Making all Openpeeps avatar creaton methods all server side, so users do not have to handle anything regarding the Openpeeps library on their end.",
+      "Interactable with a Firebase database to store and edit the avatar at any given time, as well as to host many different facial expressions of the newly created avatar to be used as sticker types for the chat application.",
+      "Has mobile support.",
+    ],
+    downsides: [
+      "While my code worked as required, my code base faced significant alterations as to match the styles of the more experienced developers and to be overall more readble.",
+      "Working with more experienced developers put me on quite the learning curve and could be challenging at times, but overall I am better for it.",
+      "Unfortunately the beta is not public yet for me to interactively display here.",
+    ],
+    links: [
+      ["Openpeeps library", "https://avatars.dicebear.com/styles/open-peeps"],
+    ],
+    screenShots: [],
+  },
   smashingMagazineAndNewScientist: {
     title: "Smashing Magazine & New Scientist Clones",
     description:
