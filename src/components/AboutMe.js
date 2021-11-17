@@ -67,7 +67,7 @@ function AboutMe(props) {
               </a>
               <p>
                 One of two paths offered after their Foundations course. Broken
-                down into three sections: Front-end, Design, and Back-end.
+                down into three sections:
               </p>
             </li>
             <ul>
@@ -81,10 +81,6 @@ function AboutMe(props) {
                   Front-end
                 </a>
                 <p>
-                  {/* Front-end focuses heavily on more in depth projects with JS
-                  and React while using Firebase as the back-end until you
-                  progress to their back-end section. This includes projects
-                  such as my */}
                   Goes in depth on React, JS, and Firebase through projects such
                   as
                   <span className="projectRef"> Twitter Clone</span> or{" "}
