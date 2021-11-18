@@ -36,7 +36,7 @@ const projectLinks = {
     packagesUsed: ["React", "JSX", "CSS"],
   },
   battleShip: {
-    title: "BattleShip",
+    title: "Battleship",
     path: "/home/Projects/Battleship",
     state: "battleship",
     packagesUsed: ["JS", "HTML", "CSS"],

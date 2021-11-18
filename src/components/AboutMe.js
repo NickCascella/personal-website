@@ -15,14 +15,14 @@ function AboutMe(props) {
         <li>
           Graduated McMaster University with a degree in{" "}
           <i>Honours Bachelor of Commerce</i> with distinction in June of 2020.
-          Specialized in accounting.
+          My focus was in accounting.
         </li>
         <li>
           Worked in the hospitality/tourism sector after graduation in Niagara
-          Falls, ON. Due do Covid-19 the industry has changed quite dramaically
-          and as a result drove me to try developing a skill in another
-          profession that I have been always curious about. This has led me to
-          pursue coding!
+          Falls, ON. Due to Covid-19 the hospitality industry has changed quite
+          dramaically and as a result drove me to try developing a skill in
+          another profession that I have been always curious about. This has led
+          me to pursue coding!
         </li>
         <li>
           Currently enrolled in{" "}
@@ -99,8 +99,8 @@ function AboutMe(props) {
               </li>
               <p>
                 Focuses on topics such as HTML structrue using proper semantics,
-                Accessibility, and the User Interface/Experience. Some such
-                concepts are applied here in as my{" "}
+                accessibility, and the user interface/experience. Such concepts
+                are applied here in my{" "}
                 <span className="projectRef">New Scientist</span> and{" "}
                 <span className="projectRef">Smash Magazine</span> website
                 clones.{" "}
