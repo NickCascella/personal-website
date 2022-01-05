@@ -1,9 +1,84 @@
 import "../components/AboutMe.css";
 import "../components/sharedFeatures.css";
+//Front-end icons
+import pugIcon from "../assets/images/homePage/mongoose_files/pug.png";
+import htmlIcon from "../assets/images/homePage/mongoose_files/html5.png";
+import cssIcon from "../assets/images/homePage/mongoose_files/css3.png";
+import jsIcon from "../assets/images/homePage/mongoose_files/javascript.png";
+import reactIcon from "../assets/images/homePage/mongoose_files/react.png";
+import sassIcon from "../assets/images/homePage/mongoose_files/sass.png";
+import nextIcon from "../assets/images/homePage/mongoose_files/next.png";
+//Back-end icons
+import nodejsIcon from "../assets/images/homePage/mongoose_files/nodejs.png";
+import expressIcon from "../assets/images/homePage/mongoose_files/express.png";
+import expressDarkmodeIcon from "../assets/images/homePage/expressDarkmode.png";
+import mongodbIcon from "../assets/images/homePage/mongoose_files/mongodb.png";
+import mongodbIconTwo from "../assets/images/homePage/mongoDbIcon.png";
+import mongooseIcon from "../assets/images/homePage/mongoose_files/mongoose.png";
+import passportjsIcon from "../assets/images/homePage/mongoose_files/passportjs.png";
+import passportjsDarkmodeIcon from "../assets/images/homePage/passportjsDarkmode.png";
+import firebaseIcon from "../assets/images/homePage/mongoose_files/firebase.png";
+import firebaseDarkmodeIcon from "../assets/images/homePage/firebaseIconDark.png";
+//Miscellanious icons
+import gitIcon from "../assets/images/homePage/mongoose_files/git.png";
+import npmIcon from "../assets/images/homePage/mongoose_files/npm.png";
+import webpackIcon from "../assets/images/homePage/mongoose_files/webpack.png";
+import herokuIcon from "../assets/images/homePage/mongoose_files/heroku.png";
+import githubIcon from "../assets/images/homePage/mongoose_files/github.png";
+import gitHubDarkIcon from "../assets/images/homePage/GitHubDarkModeLarge.png";
+import jestIcon from "../assets/images/homePage/mongoose_files/jest.png";
+// import passportjsIcon from "../assets/images/homePage/passportjs.png";
 
-function AboutMe(props) {
-  const currentTheme = props.currentTheme;
-  const changeBorderColor = props.borderTheme;
+function AboutMe({ currentTheme, borderTheme }) {
+  const changeBorderColor = borderTheme;
+
+  const renderIcons = (iconNameAndImgArray) => {
+    return iconNameAndImgArray.map((icon) => {
+      return (
+        <div className="iconContainer">
+          <img className="icon" src={icon[0]}></img>
+          <div className="iconContainerText">{icon[1]}</div>
+        </div>
+      );
+    });
+  };
+
+  const renderDarkOrLightModeIcon = (lightModeIcon, darkModeIcon) => {
+    if (currentTheme.color === "black") {
+      return lightModeIcon;
+    }
+    return darkModeIcon;
+  };
+
+  const frontEndIconArray = [
+    [htmlIcon, "HTML"],
+    [cssIcon, "CSS"],
+    [jsIcon, "JS"],
+    [sassIcon, "SASS"],
+    [reactIcon, "React"],
+    [pugIcon, "PUG"],
+  ];
+
+  const backEndIconArray = [
+    [nodejsIcon, "Node.Js"],
+    [renderDarkOrLightModeIcon(expressIcon, expressDarkmodeIcon), "Express"],
+    [mongodbIconTwo, "MongoDb"],
+    [mongooseIcon, "Mongoose"],
+    [renderDarkOrLightModeIcon(firebaseIcon, firebaseDarkmodeIcon), "Firebase"],
+    [
+      renderDarkOrLightModeIcon(passportjsIcon, passportjsDarkmodeIcon),
+      "PassportJs",
+    ],
+  ];
+
+  const miscellaneousIconArray = [
+    [npmIcon, "NPM"],
+    [gitIcon, "Git"],
+    [renderDarkOrLightModeIcon(githubIcon, gitHubDarkIcon), "GitHub"],
+    [webpackIcon, "Webpack"],
+    [herokuIcon, "Heroku"],
+    [jestIcon, "Jest"],
+  ];
 
   return (
     <div
@@ -25,20 +100,20 @@ function AboutMe(props) {
           me to pursue coding!
         </li>
         <li>
-          Currently enrolled in{" "}
+          Have completed the majority of{" "}
           <a
             href="https://www.theodinproject.com/"
             target="_blank"
+            rel="noreferrer"
             style={{ color: currentTheme.color }}
           >
             The Odin Project,
           </a>{" "}
           an open source full stack coding curriculum wtih 1000+ hours worth of
           learning material and projects updated almost daily by a driven
-          community. It is broken up into various sections including, but not
-          limited to:
+          community.
           <ul className="odinProjectOutline">
-            <li>
+            {/* <li>
               <a
                 className="completed"
                 href="https://www.theodinproject.com/paths/foundations?"
@@ -54,7 +129,7 @@ function AboutMe(props) {
                 <span className="projectRef">Etch-Sketch</span>
                 {/* to show layouts,
                 how to store and host projects on GitHub, and how JS can in turn
-                manipulate the page based on user inputs. */}
+                manipulate the page based on user inputs. 
               </p>
             </li>
             <li>
@@ -69,8 +144,8 @@ function AboutMe(props) {
                 One of two paths offered after their Foundations course. Broken
                 down into three sections:
               </p>
-            </li>
-            <ul>
+            </li> */}
+            {/* <ul>
               <li>
                 {" "}
                 <a
@@ -122,10 +197,24 @@ function AboutMe(props) {
                   own server with Node.js, Express, Mongoose, and MongoDb.
                 </p>
               </li>
-            </ul>
+            </ul> */}
           </ul>
         </li>
       </ul>
+      <div className="toolsLearned">
+        <div className="section">
+          <h3 className="sectionTitle">Front-end</h3>
+          <div className="icons">{renderIcons(frontEndIconArray)}</div>
+        </div>
+        <div className="section">
+          <h3 className="sectionTitle">Back-end</h3>
+          <div className="icons">{renderIcons(backEndIconArray)}</div>
+        </div>
+        <div className="section">
+          <h3 className="sectionTitle">Miscellaneous</h3>
+          <div className="icons">{renderIcons(miscellaneousIconArray)}</div>
+        </div>
+      </div>
     </div>
   );
 }

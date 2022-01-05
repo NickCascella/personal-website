@@ -75,6 +75,7 @@ function HomePage(props) {
               <a
                 href="https://github.com/NickCascella?tab=repositories"
                 target="_blank"
+                rel="noreferrer"
                 style={{ color: currentTheme.color }}
               >
                 <img
@@ -89,6 +90,7 @@ function HomePage(props) {
               <a
                 href="mailto:cascella3509@gmail.com?subject=Congratulations.%20You%20got%20the%20job!"
                 target="_blank"
+                rel="noreferrer"
                 style={{ color: currentTheme.color }}
               >
                 <img
@@ -105,6 +107,7 @@ function HomePage(props) {
               <a
                 href="https://www.linkedin.com/in/nick-cascella-a9546b14b/"
                 target="_blank"
+                rel="noreferrer"
                 style={{ color: currentTheme.color }}
               >
                 <img
