@@ -7,12 +7,10 @@ import cssIcon from "../assets/images/homePage/mongoose_files/css3.png";
 import jsIcon from "../assets/images/homePage/mongoose_files/javascript.png";
 import reactIcon from "../assets/images/homePage/mongoose_files/react.png";
 import sassIcon from "../assets/images/homePage/mongoose_files/sass.png";
-import nextIcon from "../assets/images/homePage/mongoose_files/next.png";
+// import nextIcon from "../assets/images/homePage/mongoose_files/next.png";
 //Back-end icons
 import nodejsIcon from "../assets/images/homePage/mongoose_files/nodejs.png";
-import expressIcon from "../assets/images/homePage/mongoose_files/express.png";
-import expressDarkmodeIcon from "../assets/images/homePage/expressDarkmode.png";
-import mongodbIcon from "../assets/images/homePage/mongoose_files/mongodb.png";
+import expressIcon from "../assets/images/homePage/expressDarkmode.png";
 import mongodbIconTwo from "../assets/images/homePage/mongoDbIcon.png";
 import mongooseIcon from "../assets/images/homePage/mongoose_files/mongoose.png";
 import passportjsIcon from "../assets/images/homePage/mongoose_files/passportjs.png";
@@ -35,8 +33,8 @@ function AboutMe({ currentTheme, borderTheme }) {
   const renderIcons = (iconNameAndImgArray) => {
     return iconNameAndImgArray.map((icon) => {
       return (
-        <div className="iconContainer">
-          <img className="icon" src={icon[0]}></img>
+        <div className="iconContainer" key={icon[1]}>
+          <img className="icon" src={icon[0]} alt={icon[1]}></img>
           <div className="iconContainerText">{icon[1]}</div>
         </div>
       );
@@ -53,7 +51,7 @@ function AboutMe({ currentTheme, borderTheme }) {
   const frontEndIconArray = [
     [htmlIcon, "HTML"],
     [cssIcon, "CSS"],
-    [jsIcon, "JS"],
+    [jsIcon, "Java Script"],
     [sassIcon, "SASS"],
     [reactIcon, "React"],
     [pugIcon, "PUG"],
@@ -61,7 +59,7 @@ function AboutMe({ currentTheme, borderTheme }) {
 
   const backEndIconArray = [
     [nodejsIcon, "Node.Js"],
-    [renderDarkOrLightModeIcon(expressIcon, expressDarkmodeIcon), "Express"],
+    [expressIcon, "Express"],
     [mongodbIconTwo, "MongoDb"],
     [mongooseIcon, "Mongoose"],
     [renderDarkOrLightModeIcon(firebaseIcon, firebaseDarkmodeIcon), "Firebase"],
@@ -201,6 +199,7 @@ function AboutMe({ currentTheme, borderTheme }) {
           </ul>
         </li>
       </ul>
+      <h2 className="skillsTitle">Skills</h2>
       <div className="toolsLearned">
         <div className="section">
           <h3 className="sectionTitle">Front-end</h3>

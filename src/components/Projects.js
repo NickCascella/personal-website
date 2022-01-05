@@ -24,7 +24,7 @@ function Projects(props) {
                 pathname: projectLinkInfo[key].path,
                 state: projectLinkInfo[key].state,
               }}
-              key={`${projectLinkInfo[key]} link`}
+              key={`${projectLinkInfo[key].path} link`}
             >
               <li
                 style={{ color: currentTheme.color }}
@@ -115,6 +115,7 @@ const RenderProject = (props) => {
               style={{ color: currentTheme.color }}
               href={linkData[1]}
               target="_blank"
+              rel="noreferrer"
               key={uniqueId()}
             >
               {linkData[0]}

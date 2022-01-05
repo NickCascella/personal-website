@@ -33,6 +33,10 @@
   margin-top: 1em;
 }
 
+.aboutMePage .skillsTitle {
+  font-weight: bold;
+}
+
 .aboutMePage .toolsLearned {
   display: -webkit-box;
   display: -ms-flexbox;
