@@ -1,0 +1,70 @@
+/* BLACK UNDERLINE ANIMATION */
+
+.aboutMeList a,
+.projectLink,
+.socialMediaLinksList a {
+  font-style: italic;
+  position: relative;
+}
+
+.aboutMeList a:hover,
+.projectLink:hover,
+.socialMediaLinksList a:hover {
+  font-weight: 900;
+}
+
+.aboutMePage a:before,
+.projectLink:before,
+.socialMediaLinksList a:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: rgba(77, 132, 184, 0.446);
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+.aboutMePage a:hover:before,
+.projectLink:hover:before,
+.socialMediaLinksList a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* PAGE LINK (SCALE/GREY COVER) ANIMATION */
+
+.pageLinks li,
+.projectsList li {
+  padding: 0.2em;
+  border-radius: 0.3em;
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(211, 211, 211, 0.52) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.pageLinks li:hover,
+.projectsList li:hover {
+  background-position: left bottom;
+  transform: scale(1.02);
+  cursor: pointer;
+  font-weight: 900;
+  z-index: 9999;
+  color: black;
+}
+
+/*
+UNDERLINE DECORATION
+*/
+
+.pageLinksUnderline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

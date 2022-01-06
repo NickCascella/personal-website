@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import HomePage from "./components/Home Page/HomePage";
+import HomePage from "./pages/Home Page/HomePage";
 
 function App() {
   const darkTheme = {

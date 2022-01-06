@@ -1,0 +1,139 @@
+.menuContainer .switch {
+  display: none;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media only screen and (max-width: 500px) {
+  .menuContainer .switch {
+    display: inline-block;
+    width: 80px;
+  }
+}
+
+.menuContainer .switch .bar1,
+.menuContainer .switch .bar2,
+.menuContainer .switch .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.menuContainer .switch.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menuContainer .switch.change .bar2 {
+  opacity: 0;
+}
+
+.menuContainer .switch.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menuContainer .switch.change .dropDownMenu {
+  display: inline;
+}
+
+.menuContainer .dropDownMenu {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .menuContainer .dropDownMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.menuContainer .dropDownMenu.noChange {
+  -webkit-animation: menuPopupReverse 1s;
+          animation: menuPopupReverse 1s;
+}
+
+.menuContainer .dropDownMenu.noChange .dropDownPageLink {
+  display: none;
+}
+
+.menuContainer .dropDownMenu.change {
+  -webkit-animation: menuPopup 0.5s;
+          animation: menuPopup 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menuContainer .dropDownMenu.change .dropDownPageLink {
+  -webkit-animation: menuItemPopup 3s;
+          animation: menuItemPopup 3s;
+}
+
+.menuContainer .dropDownMenu.change .dropDownPageLink:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes menuPopup {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes menuPopup {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes menuPopupReverse {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes menuPopupReverse {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes menuItemPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menuItemPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=MenuButton.css.map */
