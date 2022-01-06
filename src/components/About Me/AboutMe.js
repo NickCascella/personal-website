@@ -26,6 +26,8 @@ import webpackIcon from "../../assets/images/homePage/mongoose_files/webpack.png
 import herokuIcon from "../../assets/images/homePage/mongoose_files/heroku.png";
 import githubIcon from "../../assets/images/homePage/mongoose_files/github.png";
 import gitHubDarkIcon from "../../assets/images/homePage/GitHubDarkModeLarge.png";
+import expoGoLightmodeIcon from "../../assets/images/homePage/expoGoLightmodeIcon.svg";
+import expoGoDarkmodeIcon from "../../assets/images/homePage/expoGoDarkmodeIcon.png";
 import jestIcon from "../../assets/images/homePage/mongoose_files/jest.png";
 // import passportjsIcon from "../assets/images/homePage/passportjs.png";
 
@@ -52,7 +54,7 @@ function AboutMe({ currentTheme, borderTheme }) {
     [cssIcon, "CSS"],
     [jsIcon, "Java Script"],
     [sassIcon, "SASS"],
-    [reactIcon, "React"],
+    [reactIcon, "React / React Native"],
     [pugIcon, "PUG"],
     [axiosIcon, "Axios"],
   ];
@@ -73,8 +75,12 @@ function AboutMe({ currentTheme, borderTheme }) {
     [npmIcon, "npm"],
     [gitIcon, "Git"],
     [renderDarkOrLightModeIcon(githubIcon, gitHubDarkIcon), "GitHub"],
-    [webpackIcon, "Webpack"],
     [herokuIcon, "Heroku"],
+    [
+      renderDarkOrLightModeIcon(expoGoLightmodeIcon, expoGoDarkmodeIcon),
+      "Expo Go",
+    ],
+    [webpackIcon, "Webpack"],
     [jestIcon, "Jest"],
   ];
 

@@ -36,7 +36,7 @@ const projectLinks = {
     title: "Puddl",
     path: "/home/Projects/Puddl",
     state: "puddl",
-    packagesUsed: ["Next JS", "SASS", "Firebase", "JSX"],
+    packagesUsed: ["React Native", "Emotion CSS", "Expo Go", "Firebase", "JSX"],
   },
   twitterClone: {
     title: "Twitter Clone",

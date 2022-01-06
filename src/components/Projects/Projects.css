@@ -82,4 +82,12 @@
   white-space: nowrap;
   position: relative;
 }
+
+.projectsPage .projectImgsTitle {
+  font-size: 18px;
+}
+
+.projectsPage .projectImg {
+  max-width: 150px;
+}
 /*# sourceMappingURL=Projects.css.map */

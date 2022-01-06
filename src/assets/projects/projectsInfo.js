@@ -1,3 +1,5 @@
+import puddleExample from "../../assets/images/projects/puddleExample.png";
+
 const projectsData = {
   blog: {
     title: "Blog Project",
@@ -69,24 +71,29 @@ const projectsData = {
   puddl: {
     title: "Puddl",
     description:
-      "My first project involving collaboration with other developers. Currently this is planned to be a social app where you are placed in random groups with a certain amount of users. You can chat about various topics as well as play premade games in the group. I was assigned to work on the avatar creation feature for this app.",
+      "My first mobile app project involving collaboration with other developers. Currently this is planned to be a social app where you are placed in random groups with a certain amount of users. You can chat about various topics as well as play premade games in the group. I was assigned to work on the avatar creation feature.",
     features: [
       "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general through my team members.",
       "Satisifed the requirements of what was asked of me in terms of functionality.",
-      "Got to work in and learn about the basics of Next JS.",
-      "Got to learn about SASS and the benefits it has over standard CSS.",
+      "Got to work in and learn about React Native.",
+      "Got to work with Expo for testing the mobile application.",
       "Got to work with the external library (Dicebears) with the styling of Open Peeps to allow the users to create custom avatars.",
-      "This was my first instance of using server-side handling to make requests. Making all avatar creation methods server side, so that users do not have to handle anything regarding the Dicebear library on their end.",
       "Used a Firebase database to store and edit the avatar at any given time, as well as to host all differently rendered facial expressions of the newly created avatar to be used as sticker types for the chat application and elsewhere.",
-      "Has mobile support.",
+      "Gained expereince working in a progamming enviornment built for both IOS and Android and the challenges that comes with that.",
     ],
     downsides: [
       "While my code worked as required, my code faced alterations as to match the styles of the more experienced developers and to be overall more efficent.",
-      "PLEASE NOTE: The app is facing continual updates and is in very early development, meaning at times of viewing it could be bugged and/or not functioning for testing purposes.",
+      "PLEASE NOTE: This app is in early devlopment and is currently only viewable in person as neither the app or codebase is public",
     ],
     links: [
-      ["Puddl", "https://puddl.chat"],
       ["Openpeeps library", "https://avatars.dicebear.com/styles/open-peeps"],
+    ],
+    imgs: [
+      [
+        puddleExample,
+        "Puddl avatar creation screen",
+        "Snapshot of avatar creation screen - IOS",
+      ],
     ],
   },
   smashingMagazineAndNewScientist: {
@@ -201,5 +208,14 @@ const projectsData = {
     links: [["Weather App", "https://nickcascella.github.io/weather_app/"]],
   },
 };
+
+// "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general through my team members.",
+// "Satisifed the requirements of what was asked of me in terms of functionality.",
+// "Got to work in and learn about the basics of Next JS.",
+// "Got to learn about SASS and the benefits it has over standard CSS.",
+// "Got to work with the external library (Dicebears) with the styling of Open Peeps to allow the users to create custom avatars.",
+// "This was my first instance of using server-side handling to make requests. Making all avatar creation methods server side, so that users do not have to handle anything regarding the Dicebear library on their end.",
+// "Used a Firebase database to store and edit the avatar at any given time, as well as to host all differently rendered facial expressions of the newly created avatar to be used as sticker types for the chat application and elsewhere.",
+// "Has mobile support.",
 
 export default projectsData;

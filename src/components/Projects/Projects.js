@@ -120,6 +120,15 @@ const RenderProject = (props) => {
             </a>
           );
         })}
+      {specificProject.imgs &&
+        specificProject.imgs.map((img) => {
+          return (
+            <div>
+              <h3 className="projectImgsTitle">{img[2]}</h3>
+              <img className="projectImg" src={img[0]} alt={img[1]}></img>
+            </div>
+          );
+        })}
     </div>
   );
 };
