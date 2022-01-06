@@ -67,9 +67,9 @@ function Projects(props) {
       <p>
         Here is a list of some of the projects I have completed up until this
         point. If you view my Github, you can see the full list of projects I
-        have done. Browse away!
+        have done but not included here.
       </p>
-      <p>Click a project below to learn more.</p>
+      <p>Click a project below to learn more!</p>
       {renderLinks()}
     </div>
   );

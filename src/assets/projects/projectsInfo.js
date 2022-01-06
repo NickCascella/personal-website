@@ -79,7 +79,7 @@ const projectsData = {
       "Got to work with Expo for testing the mobile application.",
       "Got to work with the external library (Dicebears) with the styling of Open Peeps to allow the users to create custom avatars.",
       "Used a Firebase database to store and edit the avatar at any given time, as well as to host all differently rendered facial expressions of the newly created avatar to be used as sticker types for the chat application and elsewhere.",
-      "Gained expereince working in a progamming enviornment built for both IOS and Android and the challenges that comes with that.",
+      "Gained expereince working in a progamming enviornment built for both IOS and Android and the challenges that come with that.",
     ],
     downsides: [
       "While my code worked as required, my code faced alterations as to match the styles of the more experienced developers and to be overall more efficent.",
@@ -169,20 +169,20 @@ const projectsData = {
     ],
     links: [["Odin Shop", "https://odin-shop.web.app/"]],
   },
-  memoryGame: {
-    title: "Memory Game",
-    description:
-      "My first React app. In order to acheive the highest score possible, the player must not select the same card more than twice in a single run. After a card has been chosen, the cards are shuffled and the player must keep track of which cards they have not yet selected.",
-    features: [
-      "Taught me the basics of states and lifecycle methods with React.",
-      "Taught me the differences between class and functional components.",
-    ],
-    downsides: [
-      "Has little CSS styling. This game was only meant to demonstrate the basics of React.",
-      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide.",
-    ],
-    links: [["Memory Game", "https://nickcascella.github.io/Memory-Game/"]],
-  },
+  // memoryGame: {
+  //   title: "Memory Game",
+  //   description:
+  //     "My first React app. In order to acheive the highest score possible, the player must not select the same card more than twice in a single run. After a card has been chosen, the cards are shuffled and the player must keep track of which cards they have not yet selected.",
+  //   features: [
+  //     "Taught me the basics of states and lifecycle methods with React.",
+  //     "Taught me the differences between class and functional components.",
+  //   ],
+  //   downsides: [
+  //     "Has little CSS styling. This game was only meant to demonstrate the basics of React.",
+  //     "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide.",
+  //   ],
+  //   links: [["Memory Game", "https://nickcascella.github.io/Memory-Game/"]],
+  // },
   battleship: {
     title: "Battleship",
     description:
@@ -196,17 +196,17 @@ const projectsData = {
     ],
     links: [["Battleship", "https://nickcascella.github.io/Battleship/"]],
   },
-  weatherApp: {
-    title: "Weather App",
-    description:
-      "My first functional app which displays the weather and weekly forecast for the location specified. This uses a free API and as such there are restrictions on what exactly you can search and what data you can retrieve. You can display the weather in either metric or imperial units.",
-    features: ["Introduced me to API calls."],
-    downsides: [
-      "Search function is limited due to API restrictions.",
-      "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide.",
-    ],
-    links: [["Weather App", "https://nickcascella.github.io/weather_app/"]],
-  },
+  // weatherApp: {
+  //   title: "Weather App",
+  //   description:
+  //     "My first functional app which displays the weather and weekly forecast for the location specified. This uses a free API and as such there are restrictions on what exactly you can search and what data you can retrieve. You can display the weather in either metric or imperial units.",
+  //   features: ["Introduced me to API calls."],
+  //   downsides: [
+  //     "Search function is limited due to API restrictions.",
+  //     "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide.",
+  //   ],
+  //   links: [["Weather App", "https://nickcascella.github.io/weather_app/"]],
+  // },
 };
 
 // "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general through my team members.",

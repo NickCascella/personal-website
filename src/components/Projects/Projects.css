@@ -84,10 +84,12 @@
 }
 
 .projectsPage .projectImgsTitle {
+  margin: 34.5px 0;
   font-size: 18px;
 }
 
 .projectsPage .projectImg {
+  border-radius: 5px;
   max-width: 150px;
 }
 /*# sourceMappingURL=Projects.css.map */

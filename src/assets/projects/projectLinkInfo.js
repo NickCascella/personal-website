@@ -36,13 +36,13 @@ const projectLinks = {
     title: "Puddl",
     path: "/home/Projects/Puddl",
     state: "puddl",
-    packagesUsed: ["React Native", "Emotion CSS", "Expo Go", "Firebase", "JSX"],
+    packagesUsed: ["React Native", "Emotion CSS", "Expo Go", "Firebase"],
   },
   twitterClone: {
     title: "Twitter Clone",
     path: "/home/Projects/TwitterClone",
     state: "twitterClone",
-    packagesUsed: ["React", "Firebase", "JSX", "CSS"],
+    packagesUsed: ["React", "Firebase", "CSS"],
   },
   responsiveWebsites: {
     title: "New Scientist & Smashing Magazine",
@@ -54,32 +54,32 @@ const projectLinks = {
     title: "Where's Waldo",
     path: "/home/Projects/WhereIsWaldo",
     state: "whereIsWaldo",
-    packagesUsed: ["React", "Firebase", "JSX", "CSS"],
+    packagesUsed: ["React", "Firebase", "CSS"],
   },
   odinShop: {
     title: "Odin Shop",
     path: "/home/Projects/OdinShop",
     state: "odinShop",
-    packagesUsed: ["React", "JSX", "CSS"],
+    packagesUsed: ["React", "CSS"],
   },
-  memoryGame: {
-    title: "Memory Game",
-    path: "/home/Projects/MemoryGame",
-    state: "memoryGame",
-    packagesUsed: ["React", "JSX", "CSS"],
-  },
+  // memoryGame: {
+  //   title: "Memory Game",
+  //   path: "/home/Projects/MemoryGame",
+  //   state: "memoryGame",
+  //   packagesUsed: ["React", "JSX", "CSS"],
+  // },
   battleShip: {
     title: "Battleship",
     path: "/home/Projects/Battleship",
     state: "battleship",
     packagesUsed: ["JS", "HTML", "CSS"],
   },
-  weatherApp: {
-    title: "WeatherApp",
-    path: "/home/Projects/WeatherApp",
-    state: "weatherApp",
-    packagesUsed: ["JS", "HTML", "CSS"],
-  },
+  // weatherApp: {
+  //   title: "WeatherApp",
+  //   path: "/home/Projects/WeatherApp",
+  //   state: "weatherApp",
+  //   packagesUsed: ["JS", "HTML", "CSS"],
+  // },
 };
 
 export default projectLinks;
