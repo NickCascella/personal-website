@@ -1,4 +1,72 @@
 const projectsData = {
+  blog: {
+    title: "Blog Project",
+    description:
+      "First project where front-end and back-end sites are seperated. Two front-end sites: one for admins to implement CRUD for blogs. One for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
+    features: [
+      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
+      "A signup and login feature to access the sites, the user is stored in a JWT. Signup feature only available on the general user site.",
+      "Json web token based authentication through PassportJs. This project taught me the concepts of authentication and refresh tokens.",
+      "The back-end authentication utilizes CORS to only permit these two front-ends to send requests for security purposes.",
+      "Both front-end sites use Axios to make CRUD requests (POST,GET,PUT,DELETE).",
+      "Seperated back-end from front-end for more flexibility.",
+      "Mobile support.",
+    ],
+    downsides: [
+      "Design could be better",
+      "Does not utilize refresh tokens, as a result the access token the user is granted will expire in 20 minutes requiring them to login once more.",
+      "Since this is not session based, refreshing the page will cause the user to lose the token causing them to sign out.",
+    ],
+    links: [
+      ["Blog User Portal", "https://blog-user-portal-top.herokuapp.com/"],
+      ["Blog Admin Portal", "https://agile-plains-23571.herokuapp.com/"],
+      ["Blog Server", "https://enigmatic-harbor-91646.herokuapp.com/"],
+    ],
+  },
+  membersOnly: {
+    title: "Members Only",
+    description:
+      "A back-end focused project where you must create an account to join a messaging forum. There are also membership tiers you can obtain which provide access to more features on the site.",
+    features: [
+      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
+      "A signup and login feature to access the site, the user and account tier is stored in the session.",
+      "Session based authentication with PassportJs. User may upgrade their account tier through entering certain codes to gain access to various perks.",
+      "Uses GET and POST requests fetch, create, and delete data from the database.",
+      "Uses the view engine PUG to render static pages as well as dynamic data from the database.",
+      "Mobile support.",
+    ],
+    downsides: [
+      "Uses POST requests to make all update, fetch, and delete requests. Did not yet teach PUT or DELETE options to simplify the lesson.",
+      "Back-end and Front-end hosted together on the same site.",
+    ],
+    links: [["Members Only", "https://members-admins-only.herokuapp.com/home"]],
+  },
+  breadStore: {
+    title: "Bread Store",
+    description:
+      "First back-end focused project whereby you may purchases various breads from select bread brands and add them to a shopping cart. You may also create said brands on the site as well as their various breads.",
+    features: [
+      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
+      "Taught the basics of making GET and POST requests to the server to fetch, create, update, and delete data from the database.",
+      "Taught the idea of basic authetnication for requiring passcodes to make certain requests such as updating or deleting brands/certain breads.",
+      "Introduced me to the view engine PUG to render static pages as well as dynamic data from the database.",
+      "Used the middleware Multer to allow the uploading of images to the site.",
+      "Introduced me to .env file types to protect certain pieces of data.",
+      "Mobile support",
+    ],
+    downsides: [
+      "Uses POST requests to make all update, fetch, and delete requests. Did not yet teach PUT or DELETE options to simplify the lesson.",
+      "Back-end and Front-end hosted together on the same site.",
+      "No login required. The shopping cart is the same for all users.",
+      "Multer only saves images on the local device sending them, only the reference to the image goes to the database. Meaning other devices cannot see these images as only the reference to the local image is saved to the database.",
+    ],
+    links: [
+      [
+        "Bread Store",
+        "https://inventory-application-bread.herokuapp.com/catalog",
+      ],
+    ],
+  },
   puddl: {
     title: "Puddl",
     description:

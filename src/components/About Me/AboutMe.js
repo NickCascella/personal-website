@@ -1,30 +1,32 @@
-import "../components/AboutMe.css";
-import "../components/sharedFeatures.css";
+import "./AboutMe.css";
+import "../sharedFeatures.css";
+
 //Front-end icons
-import pugIcon from "../assets/images/homePage/mongoose_files/pug.png";
-import htmlIcon from "../assets/images/homePage/mongoose_files/html5.png";
-import cssIcon from "../assets/images/homePage/mongoose_files/css3.png";
-import jsIcon from "../assets/images/homePage/mongoose_files/javascript.png";
-import reactIcon from "../assets/images/homePage/mongoose_files/react.png";
-import sassIcon from "../assets/images/homePage/mongoose_files/sass.png";
+import pugIcon from "../../assets/images/homePage/mongoose_files/pug.png";
+import htmlIcon from "../../assets/images/homePage/mongoose_files/html5.png";
+import cssIcon from "../../assets/images/homePage/mongoose_files/css3.png";
+import jsIcon from "../../assets/images/homePage/mongoose_files/javascript.png";
+import reactIcon from "../../assets/images/homePage/mongoose_files/react.png";
+import sassIcon from "../../assets/images/homePage/mongoose_files/sass.png";
+import axiosIcon from "../../assets/images/homePage/axios.png";
 // import nextIcon from "../assets/images/homePage/mongoose_files/next.png";
 //Back-end icons
-import nodejsIcon from "../assets/images/homePage/mongoose_files/nodejs.png";
-import expressIcon from "../assets/images/homePage/expressDarkmode.png";
-import mongodbIconTwo from "../assets/images/homePage/mongoDbIcon.png";
-import mongooseIcon from "../assets/images/homePage/mongoose_files/mongoose.png";
-import passportjsIcon from "../assets/images/homePage/mongoose_files/passportjs.png";
-import passportjsDarkmodeIcon from "../assets/images/homePage/passportjsDarkmode.png";
-import firebaseIcon from "../assets/images/homePage/mongoose_files/firebase.png";
-import firebaseDarkmodeIcon from "../assets/images/homePage/firebaseIconDark.png";
+import nodejsIcon from "../../assets/images/homePage/mongoose_files/nodejs.png";
+import expressIcon from "../../assets/images/homePage/expressDarkmode.png";
+import mongodbIconTwo from "../../assets/images/homePage/mongoDbIcon.png";
+import mongooseIcon from "../../assets/images/homePage/mongoose_files/mongoose.png";
+import passportjsIcon from "../../assets/images/homePage/mongoose_files/passportjs.png";
+import passportjsDarkmodeIcon from "../../assets/images/homePage/passportjsDarkmode.png";
+import firebaseIcon from "../../assets/images/homePage/mongoose_files/firebase.png";
+import firebaseDarkmodeIcon from "../../assets/images/homePage/firebaseIconDark.png";
 //Miscellanious icons
-import gitIcon from "../assets/images/homePage/mongoose_files/git.png";
-import npmIcon from "../assets/images/homePage/mongoose_files/npm.png";
-import webpackIcon from "../assets/images/homePage/mongoose_files/webpack.png";
-import herokuIcon from "../assets/images/homePage/mongoose_files/heroku.png";
-import githubIcon from "../assets/images/homePage/mongoose_files/github.png";
-import gitHubDarkIcon from "../assets/images/homePage/GitHubDarkModeLarge.png";
-import jestIcon from "../assets/images/homePage/mongoose_files/jest.png";
+import gitIcon from "../../assets/images/homePage/mongoose_files/git.png";
+import npmIcon from "../../assets/images/homePage/mongoose_files/npm.png";
+import webpackIcon from "../../assets/images/homePage/mongoose_files/webpack.png";
+import herokuIcon from "../../assets/images/homePage/mongoose_files/heroku.png";
+import githubIcon from "../../assets/images/homePage/mongoose_files/github.png";
+import gitHubDarkIcon from "../../assets/images/homePage/GitHubDarkModeLarge.png";
+import jestIcon from "../../assets/images/homePage/mongoose_files/jest.png";
 // import passportjsIcon from "../assets/images/homePage/passportjs.png";
 
 function AboutMe({ currentTheme, borderTheme }) {
@@ -42,10 +44,7 @@ function AboutMe({ currentTheme, borderTheme }) {
   };
 
   const renderDarkOrLightModeIcon = (lightModeIcon, darkModeIcon) => {
-    if (currentTheme.color === "black") {
-      return lightModeIcon;
-    }
-    return darkModeIcon;
+    return currentTheme.color === "black" ? lightModeIcon : darkModeIcon;
   };
 
   const frontEndIconArray = [
@@ -55,10 +54,11 @@ function AboutMe({ currentTheme, borderTheme }) {
     [sassIcon, "SASS"],
     [reactIcon, "React"],
     [pugIcon, "PUG"],
+    [axiosIcon, "Axios"],
   ];
 
   const backEndIconArray = [
-    [nodejsIcon, "Node.Js"],
+    [nodejsIcon, "Node.js"],
     [expressIcon, "Express"],
     [mongodbIconTwo, "MongoDb"],
     [mongooseIcon, "Mongoose"],

@@ -1,4 +1,37 @@
 const projectLinks = {
+  blog: {
+    title: "Blog Project",
+    path: "/home/Projects/Blog",
+    state: "blog",
+    packagesUsed: [
+      "React",
+      "PUG",
+      "Node.js",
+      "Express",
+      "PassportJs",
+      "MongoDb",
+      "Mongoose",
+    ],
+  },
+  membersOnly: {
+    title: "Members Only",
+    path: "/home/Projects/MembersOnly",
+    state: "membersOnly",
+    packagesUsed: [
+      "PUG",
+      "Node.js",
+      "Express",
+      "PassportJs",
+      "MongoDb",
+      "Mongoose",
+    ],
+  },
+  breadStore: {
+    title: "Bread Store",
+    path: "/home/Projects/BreadStore",
+    state: "breadStore",
+    packagesUsed: ["PUG", "Node.js", "Express", "MongoDb", "Mongoose"],
+  },
   puddl: {
     title: "Puddl",
     path: "/home/Projects/Puddl",

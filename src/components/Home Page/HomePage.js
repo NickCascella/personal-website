@@ -1,5 +1,5 @@
-import "../components/HomePage.css";
-import "../components/sharedFeatures.css";
+import "./HomePage.css";
+import "../sharedFeatures.css";
 //DEEPENDENCIES
 import React from "react";
 import {
@@ -10,27 +10,22 @@ import {
   Link,
 } from "react-router-dom";
 //COMPONENTS
-import AboutMe from "./AboutMe";
-import Projects from "./Projects";
-import { RenderProject } from "./Projects";
-
+import AboutMe from "../About Me/AboutMe";
+import Projects from "../Projects/Projects";
+import { RenderProject } from "../Projects/Projects";
 //IMAGES
-import gitHubLightIcon from "../assets/images/homePage/GithubLightMode.PNG";
-import gitHubDarkIcon from "../assets/images/homePage/GithubDarkMode.PNG";
-import emailIcon from "../assets/images/homePage/emailIcon.PNG";
-import linkedInLightIcon from "../assets/images/homePage/LinkedInLightMode.PNG";
-import linkedInDarkIcon from "../assets/images/homePage/LinkedInDarkMode.PNG";
+import gitHubLightIcon from "../../assets/images/homePage/GithubLightMode.PNG";
+import gitHubDarkIcon from "../../assets/images/homePage/GithubDarkMode.PNG";
+import emailIcon from "../../assets/images/homePage/emailIcon.PNG";
+import linkedInLightIcon from "../../assets/images/homePage/LinkedInLightMode.PNG";
+import linkedInDarkIcon from "../../assets/images/homePage/LinkedInDarkMode.PNG";
 
 function HomePage(props) {
   const currentTheme = props.currentTheme;
   const setDarkThemeOn = props.setDarkThemeOn;
 
   const themeButtonDisplay = () => {
-    if (currentTheme.color === "white") {
-      return "Dark Theme";
-    } else {
-      return "Light Theme";
-    }
+    return currentTheme.color === "white" ? "Dark Theme" : "Light Theme";
   };
 
   const checkSpecialStyling = (hover) => {
@@ -55,11 +50,13 @@ function HomePage(props) {
   };
 
   const changeBorderColor = () => {
-    if (currentTheme.color === "white") {
-      return "white";
-    } else {
-      return "black";
-    }
+    return currentTheme.color === "white" ? "white" : "black";
+  };
+
+  const switchClass = (classOneDarkTheme, classTwoLightTheme) => {
+    return currentTheme.color === "white"
+      ? classOneDarkTheme
+      : classTwoLightTheme;
   };
 
   return (
@@ -69,7 +66,9 @@ function HomePage(props) {
           className="siteNavigation fadeInLeft"
           style={{ borderColor: changeBorderColor() }}
         >
-          <h1>Nicholas Cascella</h1>
+          <h1 className={switchClass("headerDarkmode", "headerLightmode")}>
+            Nicholas Cascella
+          </h1>
           <ul className="socialMediaLinksList">
             <li className="socialMediaListItem">
               <a
@@ -184,7 +183,6 @@ function HomePage(props) {
                 borderTheme={changeBorderColor}
               ></RenderProject>
             </Route>
-            s
           </Switch>
         </section>
       </Router>

@@ -1,10 +1,10 @@
-import "../components/Projects.css";
-import "../components/sharedFeatures.css";
+import "./Projects.css";
+import "../sharedFeatures.css";
 //DEPENDENCIES
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import projectsData from "../assets/projectsInfo";
-import projectLinkInfo from "../assets/projectLinkInfo";
+import projectsData from "../../assets/projectsInfo";
+import projectLinkInfo from "../../assets/projectLinkInfo";
 
 function Projects(props) {
   const currentTheme = props.currentTheme;
