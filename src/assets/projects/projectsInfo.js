@@ -13,7 +13,6 @@ const projectsData = {
       "Mobile support.",
     ],
     downsides: [
-      "Design could be better",
       "Does not utilize refresh tokens, as a result the access token the user is granted will expire in 20 minutes requiring them to login once more.",
       "Since this is not session based, refreshing the page will cause the user to lose the token causing them to sign out.",
     ],

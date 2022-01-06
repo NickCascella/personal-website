@@ -3,8 +3,8 @@ import "../sharedFeatures.css";
 //DEPENDENCIES
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import projectsData from "../../assets/projectsInfo";
-import projectLinkInfo from "../../assets/projectLinkInfo";
+import projectsData from "../../assets/projects/projectsInfo";
+import projectLinkInfo from "../../assets/projects/projectLinkInfo";
 
 function Projects(props) {
   const currentTheme = props.currentTheme;
@@ -66,10 +66,8 @@ function Projects(props) {
       <h2>Projects</h2>
       <p>
         Here is a list of some of the projects I have completed up until this
-        point. If you view my Github, you can see the full list of projects. The
-        reason they are not all listed here is because while they were valuable
-        learning experiences which taught important concepts, I only wanted to
-        showcase the more developed projects.
+        point. If you view my Github, you can see the full list of projects I
+        have done. Browse away!
       </p>
       <p>Click a project below to learn more.</p>
       {renderLinks()}

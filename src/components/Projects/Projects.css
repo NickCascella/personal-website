@@ -1,81 +1,85 @@
+@charset "UTF-8";
 .projectsPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 1em;
   line-height: 150%;
   border-left: 1px solid black;
   overflow-x: hidden;
 }
 
-.projectsList {
-  padding-left: 0;
-  list-style-type: none;
+@media only screen and (max-width: 1100px) {
+  .projectsPage {
+    border-left: none;
+  }
 }
 
-.projectsList li {
+.projectsPage .projectsList {
+  padding-left: 0;
+  list-style-type: none;
+  /*
+  =================
+  INDIVIDUAL PROJECTS
+  =================
+  */
+}
+
+.projectsPage .projectsList li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   margin-top: 1em;
 }
 
-.projectName,
-.projectLanguage {
+.projectsPage .projectsList .projectName,
+.projectsPage .projectsList .projectLanguage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 35%;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.projectLanguage {
+.projectsPage .projectsList .projectLanguage {
   margin-right: 1em;
 }
 
-/*
-=================
-INDIVIDUAL PROJECTS
-=================
-*/
-
-.projectKeyFeatures {
+.projectsPage .projectKeyFeatures {
   list-style: none;
   padding-left: 0;
 }
 
-.projectKeyFeatures li {
+.projectsPage .projectKeyFeatures li {
   width: 100%;
   padding-top: 5px;
 }
 
-.projectKeyFeatures li:before {
+.projectsPage .projectKeyFeatures li:before {
   content: "✓";
   display: inline-block;
   padding-right: 0.2em;
 }
 
-.projectDownsides li:before {
+.projectsPage .projectDownsides li:before {
   content: "X";
 }
 
-.divider {
-  width: 50%;
-  margin: 5px auto;
-  bottom: 50px;
-  border: 1px solid black;
-}
-
-.projectLink {
+.projectsPage .projectLink {
   margin: 0 auto;
   text-align: center;
   white-space: nowrap;
   position: relative;
 }
-
-@media only screen and (max-width: 1100px) {
-  .projectsPage {
-    border-left: none;
-  }
-  .divider {
-    width: 60%;
-  }
-}
+/*# sourceMappingURL=Projects.css.map */
