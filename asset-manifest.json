@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.b51f4866.chunk.css",
+    "main.css": "/personal-website/static/css/main.41266392.chunk.css",
     "main.js": "/personal-website/static/js/main.86e9c1cc.chunk.js",
     "main.js.map": "/personal-website/static/js/main.86e9c1cc.chunk.js.map",
     "runtime-main.js": "/personal-website/static/js/runtime-main.3b575e47.js",
@@ -10,7 +10,7 @@
     "static/js/3.2a04784e.chunk.js": "/personal-website/static/js/3.2a04784e.chunk.js",
     "static/js/3.2a04784e.chunk.js.map": "/personal-website/static/js/3.2a04784e.chunk.js.map",
     "index.html": "/personal-website/index.html",
-    "static/css/main.b51f4866.chunk.css.map": "/personal-website/static/css/main.b51f4866.chunk.css.map",
+    "static/css/main.41266392.chunk.css.map": "/personal-website/static/css/main.41266392.chunk.css.map",
     "static/js/2.a2cd0b05.chunk.js.LICENSE.txt": "/personal-website/static/js/2.a2cd0b05.chunk.js.LICENSE.txt",
     "static/media/GithubDarkMode.266ca631.PNG": "/personal-website/static/media/GithubDarkMode.266ca631.PNG",
     "static/media/GithubLightMode.0035c307.PNG": "/personal-website/static/media/GithubLightMode.0035c307.PNG",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.3b575e47.js",
     "static/js/2.a2cd0b05.chunk.js",
-    "static/css/main.b51f4866.chunk.css",
+    "static/css/main.41266392.chunk.css",
     "static/js/main.86e9c1cc.chunk.js"
   ]
 }
