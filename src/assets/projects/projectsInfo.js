@@ -7,11 +7,11 @@ const projectsData = {
       "First project where front-end and back-end sites are seperated. Two front-end sites: one for admins to implement CRUD for blogs. One for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
     features: [
       "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
-      "A signup and login feature to access the sites, the user is stored in a JWT. Signup feature only available on the general user site.",
-      "Json web token based authentication through PassportJs. This project taught me the concepts of authentication and refresh tokens.",
+      "A signup and login feature to access the sites, the user is stored in a JWT.",
+      "Json web token based authentication through PassportJs.",
       "The back-end authentication utilizes CORS to only permit these two front-ends to send requests for security purposes.",
       "Both front-end sites use Axios to make CRUD requests (POST,GET,PUT,DELETE).",
-      "Seperated back-end from front-end for more flexibility.",
+      "Seperated back-end from front-ends for more flexibility.",
       "Mobile support.",
     ],
     downsides: [
@@ -75,8 +75,7 @@ const projectsData = {
     features: [
       "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general through my team members.",
       "Satisifed the requirements of what was asked of me in terms of functionality.",
-      "Got to work in and learn about React Native.",
-      "Got to work with Expo for testing the mobile application.",
+      "Got to work in and learn about React Native and Expo for mobile applications.",
       "Got to work with the external library (Dicebears) with the styling of Open Peeps to allow the users to create custom avatars.",
       "Used a Firebase database to store and edit the avatar at any given time, as well as to host all differently rendered facial expressions of the newly created avatar to be used as sticker types for the chat application and elsewhere.",
       "Gained expereince working in a progamming enviornment built for both IOS and Android and the challenges that come with that.",

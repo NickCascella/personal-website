@@ -74,9 +74,14 @@
           animation-fill-mode: forwards;
 }
 
-.menuContainer .dropDownMenu.change .dropDownPageLink {
-  -webkit-animation: menuItemPopup 3s;
-          animation: menuItemPopup 3s;
+.menuContainer .dropDownMenu.change .dropDownPageLink.one {
+  -webkit-animation: menuItemPopup 1.5s;
+          animation: menuItemPopup 1.5s;
+}
+
+.menuContainer .dropDownMenu.change .dropDownPageLink.two {
+  -webkit-animation: menuItemPopup 2.5s;
+          animation: menuItemPopup 2.5s;
 }
 
 .menuContainer .dropDownMenu.change .dropDownPageLink:hover {
@@ -88,7 +93,7 @@
     height: 0;
   }
   100% {
-    height: 50px;
+    height: 55px;
   }
 }
 
@@ -97,13 +102,13 @@
     height: 0;
   }
   100% {
-    height: 50px;
+    height: 55px;
   }
 }
 
 @-webkit-keyframes menuPopupReverse {
   0% {
-    height: 50px;
+    height: 55px;
   }
   100% {
     height: 0px;
@@ -112,7 +117,7 @@
 
 @keyframes menuPopupReverse {
   0% {
-    height: 50px;
+    height: 55px;
   }
   100% {
     height: 0px;

@@ -10,10 +10,11 @@ function App() {
 
   const lightTheme = {
     color: "black",
-    backgroundColor: "rgba(255,255,255, 0.9)",
+    backgroundColor: "white",
   };
 
-  const [darkThemeOn, setDarkThemeOn] = useState(false);
+  // "rgba(255,255,255, 0.9)",
+  const [darkThemeOn, setDarkThemeOn] = useState(true);
 
   const currentTheme = () => {
     if (darkThemeOn === true) {
@@ -23,6 +24,22 @@ function App() {
     }
   };
 
+  const bubbleTheme = () => {
+    return darkThemeOn
+      ? "rgba(50, 48, 197, 0.546)"
+      : "rgba(17, 117, 248, 0.552)";
+  };
+
+  const renderBubbles = () => {
+    let arrayOfBubbles = [];
+    for (let i = 0; i < 10; i++) {
+      arrayOfBubbles.push(i);
+    }
+    return arrayOfBubbles.map(() => {
+      return <li style={{ background: bubbleTheme() }}></li>;
+    });
+  };
+
   return (
     <div className="app">
       <HomePage
@@ -30,18 +47,7 @@ function App() {
         setDarkThemeOn={setDarkThemeOn}
       ></HomePage>
       <div className="area" style={currentTheme()}>
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <ul className="circles">{renderBubbles()}</ul>
       </div>
     </div>
   );

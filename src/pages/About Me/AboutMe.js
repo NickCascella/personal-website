@@ -90,20 +90,20 @@ function AboutMe({ currentTheme, borderTheme }) {
       style={{ borderColor: changeBorderColor() }}
     >
       <h2>About Me</h2>
-      <ul className="aboutMeList">
-        <li>
+      <div className="aboutMeList">
+        <p>
           Graduated McMaster University with a degree in{" "}
           <i>Honours Bachelor of Commerce</i> with distinction in June of 2020.
           My focus was in accounting.
-        </li>
-        <li>
+        </p>
+        <p>
           Worked in the hospitality/tourism sector after graduation in Niagara
           Falls, ON. Due to Covid-19 the hospitality industry has changed quite
           dramaically and as a result drove me to try developing a skill in
           another profession that I have been always curious about. This has led
           me to pursue coding!
-        </li>
-        <li>
+        </p>
+        <p>
           Have completed the majority of{" "}
           <a
             href="https://www.theodinproject.com/"
@@ -115,8 +115,8 @@ function AboutMe({ currentTheme, borderTheme }) {
           </a>{" "}
           an open source full stack coding curriculum with tons of learning
           material and projects updated almost daily by a driven community.
-        </li>
-        <li>
+        </p>
+        <p>
           Currently enrolled in{" "}
           <a
             href="https://brainstation.io/course/online/remote-web-development-bootcamp"
@@ -128,8 +128,8 @@ function AboutMe({ currentTheme, borderTheme }) {
           </a>{" "}
           to be mentored by industry professionals and to refine and build upon
           what The Odin Project has taught me!
-        </li>
-      </ul>
+        </p>
+      </div>
       <h2 className="skillsTitle">Skills</h2>
       <div className="toolsLearned">
         <div className="section">
@@ -143,6 +143,26 @@ function AboutMe({ currentTheme, borderTheme }) {
         <div className="section">
           <h3 className="sectionTitle">Miscellaneous</h3>
           <div className="icons">{renderIcons(miscellaneousIconArray)}</div>
+        </div>
+        <div>
+          <i>
+            Icons made by{" "}
+            <a
+              href="https://www.freepik.com"
+              title="Freepik"
+              style={{ color: currentTheme.color }}
+            >
+              Freepik
+            </a>{" "}
+            from{" "}
+            <a
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+              style={{ color: currentTheme.color }}
+            >
+              www.flaticon.com
+            </a>
+          </i>
         </div>
       </div>
     </div>

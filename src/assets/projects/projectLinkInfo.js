@@ -38,17 +38,18 @@ const projectLinks = {
     state: "puddl",
     packagesUsed: ["React Native", "Emotion CSS", "Expo Go", "Firebase"],
   },
-  twitterClone: {
-    title: "Twitter Clone",
-    path: "/home/Projects/TwitterClone",
-    state: "twitterClone",
-    packagesUsed: ["React", "Firebase", "CSS"],
-  },
+
   responsiveWebsites: {
     title: "New Scientist & Smashing Magazine",
     path: "/home/Projects/SmashingMagazine",
     state: "smashingMagazineAndNewScientist",
     packagesUsed: ["JS", "HTML", "CSS"],
+  },
+  twitterClone: {
+    title: "Twitter Clone",
+    path: "/home/Projects/TwitterClone",
+    state: "twitterClone",
+    packagesUsed: ["React", "Firebase", "CSS"],
   },
   whereIsWaldo: {
     title: "Where's Waldo",

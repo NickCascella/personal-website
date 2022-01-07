@@ -15,25 +15,6 @@
 
 .aboutMePage .h2 {
   margin-bottom: 0;
-}
-
-.aboutMePage .aboutMeList {
-  padding-left: 1em;
-}
-
-.aboutMePage .aboutMeList li {
-  margin-top: 1em;
-}
-
-.aboutMePage .aboutMeList li ul li {
-  margin-top: 0;
-}
-
-.aboutMePage .aboutMeList .odinProjectOutline {
-  margin-top: 1em;
-}
-
-.aboutMePage .skillsTitle {
   font-weight: bold;
 }
 
