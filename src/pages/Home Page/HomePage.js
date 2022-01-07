@@ -39,7 +39,7 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
 
   return (
     <div className="homePage" style={{ color: currentTheme.color }}>
-      <Router>
+      <Router basename="/personal-website">
         <nav
           className="siteNavigation fadeInLeft"
           style={{ borderColor: changeBorderColor() }}
@@ -47,7 +47,9 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
           <h1 className={switchClass("headerDarkmode", "headerLightmode")}>
             Nicholas Cascella
           </h1>
+
           <SocialMediaList currentTheme={currentTheme} />
+
           <ul className="pageLinks">
             <Link to="/home/About-Me">
               <li
@@ -86,7 +88,7 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
         </nav>
         <section className="displayedPage">
           <Switch>
-            <Route exact path="/personal-website">
+            <Route exact path="/">
               <Redirect to="/home/About-Me" />
             </Route>
             <Route path="/home/About-Me">
@@ -102,7 +104,7 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
                 specialStyling={checkSpecialStyling}
               ></Projects>
             </Route>
-            <Route path="/home/Projects/">
+            <Route path="/home/Projects">
               <RenderProject
                 currentTheme={currentTheme}
                 borderTheme={changeBorderColor}

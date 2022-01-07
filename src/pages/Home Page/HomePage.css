@@ -63,43 +63,6 @@
   }
 }
 
-.homePage .siteNavigation .socialMediaLinksList {
-  margin-top: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.homePage .siteNavigation .socialMediaLinksList .socialMediaListItem {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-top: 0.5em;
-  margin-right: 1em;
-}
-
-.homePage .siteNavigation .socialMediaLinksList .socialMediaListItem:nth-child(1) {
-  margin-top: 0;
-}
-
-.homePage .siteNavigation .socialMediaLinksList a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  color: black;
-}
-
-.homePage .siteNavigation .socialMediaLinksList a .socialMediaIcon {
-  margin-right: 0.1em;
-  width: 16px;
-  height: 16px;
-  font-weight: bold;
-  background-size: cover;
-}
-
 .homePage .siteNavigation .pageLinks {
   padding-left: 0;
   list-style-type: none;

@@ -1,0 +1,49 @@
+.socialMediaLinksList {
+  margin-top: 0;
+  padding-left: 0;
+  list-style-type: none;
+  @media only screen and (min-width: 600px) and (max-width: 1100px) {
+    margin-bottom: 0;
+  }
+  .socialMediaListItem {
+    width: max-content;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+    .socialMediaIcon {
+      margin-right: 0.1em;
+      width: 16px;
+      height: 16px;
+      font-weight: bold;
+      background-size: cover;
+    }
+  }
+}
+
+// @media only screen and (max-width: 500px) {
+//   .socialMediaLinksList {
+//     width: max-content;
+//     margin-left: 15px;
+//     .socialMediaListItem {
+//       margin-top: 0;
+//     }
+//     a {
+//       .socialMediaIcon {
+//         width: 24px;
+//         height: 24px;
+//       }
+//       .socialMediaName {
+//         display: none;
+//       }
+//     }
+//   }
+// }

@@ -109,7 +109,7 @@ function AboutMe({ currentTheme, borderTheme }) {
             href="https://www.theodinproject.com/"
             target="_blank"
             rel="noreferrer"
-            style={{ color: currentTheme.color }}
+            style={{ color: currentTheme.color, fontStyle: "italic" }}
           >
             The Odin Project,
           </a>{" "}
@@ -122,12 +122,12 @@ function AboutMe({ currentTheme, borderTheme }) {
             href="https://brainstation.io/course/online/remote-web-development-bootcamp"
             target="_blank"
             rel="noreferrer"
-            style={{ color: currentTheme.color }}
+            style={{ color: currentTheme.color, fontStyle: "italic" }}
           >
             Brain Stations Web Development Bootcamp
           </a>{" "}
           to be mentored by industry professionals and to refine and build upon
-          what The Odin Project has taught me!
+          what I have learned so far!
         </p>
       </div>
       <h2 className="skillsTitle">Skills</h2>

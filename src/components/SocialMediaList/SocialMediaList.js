@@ -1,3 +1,4 @@
+import "./SocialMediaList.css";
 import gitHubLightIcon from "../../assets/images/homePage/GithubLightMode.PNG";
 import gitHubDarkIcon from "../../assets/images/homePage/GithubDarkMode.PNG";
 import emailIcon from "../../assets/images/homePage/emailIcon.PNG";

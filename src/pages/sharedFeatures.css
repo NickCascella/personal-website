@@ -44,11 +44,12 @@
   background: linear-gradient(
     to left,
     rgba(255, 255, 255, 0) 50%,
-    rgba(211, 211, 211, 0.52) 50%
+    rgba(187, 217, 253, 0.452) 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;
 }
+/* rgba(79, 149, 241, 0.452 */
 
 .pageLinks li:hover,
 .projectsList li:hover {

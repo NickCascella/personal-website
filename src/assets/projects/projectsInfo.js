@@ -4,7 +4,7 @@ const projectsData = {
   blog: {
     title: "Blog Project",
     description:
-      "First project where front-end and back-end sites are seperated. Two front-end sites: one for admins to implement CRUD for blogs. One for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
+      "First project where front-end and back-end sites are seperated. Two front-end sites: one for admins to implement CRUD for blogs and nne for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
     features: [
       "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
       "A signup and login feature to access the sites, the user is stored in a JWT.",
@@ -16,7 +16,7 @@ const projectsData = {
     ],
     downsides: [
       "Does not utilize refresh tokens, as a result the access token the user is granted will expire in 20 minutes requiring them to login once more.",
-      "Since this is not session based, refreshing the page will cause the user to lose the token causing them to sign out.",
+      "Since this is not session based and because the token is not stored in a cookie, refreshing the page will cause the user to lose the token causing them to sign out.",
     ],
     links: [
       ["Blog User Portal", "https://blog-user-portal-top.herokuapp.com/"],
@@ -74,7 +74,6 @@ const projectsData = {
       "My first mobile app project involving collaboration with other developers. Currently this is planned to be a social app where you are placed in random groups with a certain amount of users. You can chat about various topics as well as play premade games in the group. I was assigned to work on the avatar creation feature.",
     features: [
       "Got to have my code peer reviewed through GIT, learned many different organizational tips, and learned better coding practicies in general through my team members.",
-      "Satisifed the requirements of what was asked of me in terms of functionality.",
       "Got to work in and learn about React Native and Expo for mobile applications.",
       "Got to work with the external library (Dicebears) with the styling of Open Peeps to allow the users to create custom avatars.",
       "Used a Firebase database to store and edit the avatar at any given time, as well as to host all differently rendered facial expressions of the newly created avatar to be used as sticker types for the chat application and elsewhere.",

@@ -1,8 +1,7 @@
 import "./Projects.css";
 import "../sharedFeatures.css";
 //DEPENDENCIES
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, Redirect } from "react-router-dom";
 import projectsData from "../../assets/projects/projectsInfo";
 import projectLinkInfo from "../../assets/projects/projectLinkInfo";
 import { useEffect } from "react";
@@ -67,8 +66,8 @@ function Projects(props) {
       <h2>Projects</h2>
       <p>
         Here is a list of some of the projects I have completed up until this
-        point. If you view my Github, you can see the full list of projects I
-        have done but not included here.
+        point. If you view my Github, you can see the full list I have done but
+        not included here.
       </p>
       <p>Click a project below to learn more!</p>
       {renderLinks()}
@@ -76,20 +75,29 @@ function Projects(props) {
   );
 }
 
-const RenderProject = (props) => {
+const RenderProject = ({ currentTheme, borderTheme }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
 
   const location = useLocation();
   const specificProject = projectsData[location.state];
-  const currentTheme = props.currentTheme;
-  const changeBorderColor = props.borderTheme;
+
+  const changeBorderColor = borderTheme;
   const uniqueId = () => {
     return Math.random() * 1000000;
   };
   if (!specificProject) {
-    return <div>ERROR: Project cannot be found.</div>;
+    return (
+      <Redirect to={"/home/projects"} />
+      // <Redirect route={"/home/projects"} />
+      // <div>
+      //   ERROR: Project cannot be found...or you simply tried opening the page in
+      //   a new tab/refreshed the project page. Currently undergoing some codebase
+      //   changes so please render the projects page once more and open the
+      //   project normally. Thank you :)
+      // </div>
+    );
   }
 
   return (

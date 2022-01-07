@@ -6,6 +6,7 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
   .siteNavigation {
     display: flex;
     flex-direction: column;
@@ -39,32 +40,7 @@
         opacity: 1;
       }
     }
-    .socialMediaLinksList {
-      margin-top: 0;
-      padding-left: 0;
-      list-style-type: none;
-      .socialMediaListItem {
-        width: max-content;
-        margin-top: 0.5em;
-        margin-right: 1em;
-        &:nth-child(1) {
-          margin-top: 0;
-        }
-      }
-      a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: black;
-        .socialMediaIcon {
-          margin-right: 0.1em;
-          width: 16px;
-          height: 16px;
-          font-weight: bold;
-          background-size: cover;
-        }
-      }
-    }
+
     .pageLinks {
       padding-left: 0;
       list-style-type: none;

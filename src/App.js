@@ -13,7 +13,6 @@ function App() {
     backgroundColor: "white",
   };
 
-  // "rgba(255,255,255, 0.9)",
   const [darkThemeOn, setDarkThemeOn] = useState(true);
 
   const currentTheme = () => {
@@ -35,8 +34,8 @@ function App() {
     for (let i = 0; i < 10; i++) {
       arrayOfBubbles.push(i);
     }
-    return arrayOfBubbles.map(() => {
-      return <li style={{ background: bubbleTheme() }}></li>;
+    return arrayOfBubbles.map((index) => {
+      return <li key={index} style={{ background: bubbleTheme() }}></li>;
     });
   };
 
