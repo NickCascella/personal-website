@@ -1,7 +1,7 @@
 import "./HomePage.css";
 import "../sharedFeatures.css";
 //DEEPENDENCIES
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,9 +15,13 @@ import ThemeSlider from "../../components/ThemeSlider/ThemeSlider";
 import SocialMediaList from "../../components/SocialMediaList/SocialMediaList";
 import AboutMe from "../About Me/AboutMe";
 import Projects from "../Projects/Projects";
+import ProjectProgramsPage from "../Project Programs/ProjectProgramList";
 import { RenderProject } from "../Projects/Projects";
 
 function HomePage({ currentTheme, setDarkThemeOn }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const checkSpecialStyling = (hover) => {
     if (
       (currentTheme.color === "white" && hover === "true") ||
@@ -74,7 +78,7 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
                   e.currentTarget.style.color = checkSpecialStyling("false");
                 }}
               >
-                <span className="pageLinksUnderline"> Projects </span>
+                <span className="pageLinksUnderline">Programs</span>
               </li>
             </Link>
           </ul>
@@ -98,13 +102,20 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
               ></AboutMe>
             </Route>
             <Route exact path="/home/Projects">
+              <ProjectProgramsPage
+                borderTheme={changeBorderColor}
+                currentTheme={currentTheme}
+                specialStyling={checkSpecialStyling}
+              />
+            </Route>
+            <Route exact path="/home/Projects/:projectProgram">
               <Projects
                 borderTheme={changeBorderColor}
                 currentTheme={currentTheme}
                 specialStyling={checkSpecialStyling}
               ></Projects>
             </Route>
-            <Route path="/home/Projects">
+            <Route path="/home/Projects/:projectProgram/:project">
               <RenderProject
                 currentTheme={currentTheme}
                 borderTheme={changeBorderColor}

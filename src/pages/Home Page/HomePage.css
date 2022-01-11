@@ -20,6 +20,17 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 35%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+@media only screen and (min-width: 1100px) {
+  .homePage .siteNavigation {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px;
+  }
 }
 
 .homePage .siteNavigation .headerDarkmode:after {

@@ -2,14 +2,35 @@ import "./Projects.css";
 import "../sharedFeatures.css";
 //DEPENDENCIES
 import { Link, useLocation, Redirect } from "react-router-dom";
-import projectsData from "../../assets/projects/projectsInfo";
-import projectLinkInfo from "../../assets/projects/projectLinkInfo";
+import odinIcon from "../../assets/images/projects/odinIcon.svg";
+import brainstationDarkIcon from "../../assets/images/projects/brainstationDarkIcon.png";
+import brainstationLightIcon from "../../assets/images/projects/brainstationLightIcon.png";
 import { useEffect } from "react";
 
 function Projects(props) {
   const currentTheme = props.currentTheme;
   const checkSpecialStyling = props.specialStyling;
   const changeBorderColor = props.borderTheme;
+  const location = useLocation();
+  const programData = location.state;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  if (!programData) {
+    return <Redirect to={"/home/projects"} />;
+  }
+  const projectLinkInfo = programData.projectLinkInfo;
+
+  //fix this
+  const checkIcons = (icon) => {
+    if (icon === odinIcon) {
+      return odinIcon;
+    } else if (currentTheme.color === "black") {
+      return brainstationLightIcon;
+    } else {
+      return brainstationDarkIcon;
+    }
+  };
 
   const renderLinks = () => {
     const arrayOfLinkKeys = Object.keys(projectLinkInfo);
@@ -22,7 +43,10 @@ function Projects(props) {
               className="projectTitle"
               to={{
                 pathname: projectLinkInfo[key].path,
-                state: projectLinkInfo[key].state,
+                state: {
+                  specificProject: projectLinkInfo[key].state,
+                  projectData: programData.projectData,
+                },
               }}
               key={`${projectLinkInfo[key].path} link`}
             >
@@ -63,7 +87,18 @@ function Projects(props) {
       className="projectsPage fadeIn"
       style={{ borderColor: changeBorderColor() }}
     >
-      <h2>Projects</h2>
+      <div className="projectsListHeaderAndIcon">
+        <h2>
+          <span style={programData.programDetails.titleStyle}>
+            {programData.programDetails.title}
+          </span>
+        </h2>
+        <img
+          className="icon"
+          alt="program icon"
+          src={checkIcons(programData.programDetails.icon)}
+        ></img>
+      </div>
       <p>
         Here is a list of some of the projects I have completed up until this
         point. If you view my Github, you can see the full list I have done but
@@ -81,23 +116,18 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
   }, []);
 
   const location = useLocation();
-  const specificProject = projectsData[location.state];
-
+  let locationData = location.state;
+  if (!locationData) {
+    return <Redirect to={"/home/projects"} />;
+  }
+  const projectsData = locationData.projectData;
+  const specificProject = projectsData[locationData.specificProject];
   const changeBorderColor = borderTheme;
   const uniqueId = () => {
     return Math.random() * 1000000;
   };
   if (!specificProject) {
-    return (
-      <Redirect to={"/home/projects"} />
-      // <Redirect route={"/home/projects"} />
-      // <div>
-      //   ERROR: Project cannot be found...or you simply tried opening the page in
-      //   a new tab/refreshed the project page. Currently undergoing some codebase
-      //   changes so please render the projects page once more and open the
-      //   project normally. Thank you :)
-      // </div>
-    );
+    return <Redirect to={"/home/projects"} />;
   }
 
   return (
@@ -105,6 +135,7 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
       className="projectsPage specificProject fadeIn"
       style={{ borderColor: changeBorderColor() }}
     >
+      {}
       <h2>{specificProject.title}</h2>
       <h3>Project Description</h3>
       <p>{specificProject.description}</p>

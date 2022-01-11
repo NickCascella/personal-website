@@ -67,7 +67,7 @@ const MenuButton = ({ currentTheme }) => {
             style={{ color: currentTheme.color }}
           >
             {" "}
-            Projects{" "}
+            Programs{" "}
           </div>
         </Link>
       </div>

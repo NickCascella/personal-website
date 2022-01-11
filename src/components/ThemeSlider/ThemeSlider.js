@@ -29,6 +29,7 @@ const ThemeSlider = ({ setDarkThemeOn, currentTheme }) => {
 
         <img
           className="slider round"
+          alt="Slider for switch"
           src={checkTheme()}
           style={{ backgroundColor: backgroundColor() }}
         ></img>

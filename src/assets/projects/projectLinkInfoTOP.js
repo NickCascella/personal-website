@@ -1,7 +1,7 @@
 const projectLinks = {
   blog: {
     title: "Blog Project",
-    path: "/home/Projects/Blog",
+    path: "/home/Projects/Odin-Project/Blog",
     state: "blog",
     packagesUsed: [
       "React",
@@ -15,7 +15,7 @@ const projectLinks = {
   },
   membersOnly: {
     title: "Members Only",
-    path: "/home/Projects/MembersOnly",
+    path: "/home/Projects/Odin-Project/MembersOnly",
     state: "membersOnly",
     packagesUsed: [
       "PUG",
@@ -28,7 +28,7 @@ const projectLinks = {
   },
   breadStore: {
     title: "Bread Store",
-    path: "/home/Projects/BreadStore",
+    path: "/home/Projects/Odin-Project/BreadStore",
     state: "breadStore",
     packagesUsed: ["PUG", "Node.js", "Express", "MongoDb", "Mongoose"],
   },
@@ -36,30 +36,36 @@ const projectLinks = {
     title: "Puddl",
     path: "/home/Projects/Puddl",
     state: "puddl",
-    packagesUsed: ["React Native", "Emotion CSS", "Expo Go", "Firebase"],
+    packagesUsed: [
+      "React Native",
+      "Typescript",
+      "Emotion CSS",
+      "Expo Go",
+      "Firebase",
+    ],
   },
 
   responsiveWebsites: {
     title: "New Scientist & Smashing Magazine",
-    path: "/home/Projects/SmashingMagazine",
+    path: "/home/Projects/Odin-Project/SmashingMagazine",
     state: "smashingMagazineAndNewScientist",
     packagesUsed: ["JS", "HTML", "CSS"],
   },
   twitterClone: {
     title: "Twitter Clone",
-    path: "/home/Projects/TwitterClone",
+    path: "/home/Projects/Odin-Project/TwitterClone",
     state: "twitterClone",
     packagesUsed: ["React", "Firebase", "CSS"],
   },
   whereIsWaldo: {
     title: "Where's Waldo",
-    path: "/home/Projects/WhereIsWaldo",
+    path: "/home/Projects/Odin-Project/WhereIsWaldo",
     state: "whereIsWaldo",
     packagesUsed: ["React", "Firebase", "CSS"],
   },
   odinShop: {
     title: "Odin Shop",
-    path: "/home/Projects/OdinShop",
+    path: "/home/Projects/Odin-Project/OdinShop",
     state: "odinShop",
     packagesUsed: ["React", "CSS"],
   },
@@ -68,10 +74,10 @@ const projectLinks = {
   //   path: "/home/Projects/MemoryGame",
   //   state: "memoryGame",
   //   packagesUsed: ["React", "JSX", "CSS"],
-  // },
+  // },s
   battleShip: {
     title: "Battleship",
-    path: "/home/Projects/Battleship",
+    path: "/home/Projects/Odin-Project/Battleship",
     state: "battleship",
     packagesUsed: ["JS", "HTML", "CSS"],
   },

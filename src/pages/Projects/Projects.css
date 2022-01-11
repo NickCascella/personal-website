@@ -19,6 +19,36 @@
   }
 }
 
+.projectsPage .projectsListHeaderAndIcon {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 50px;
+}
+
+.projectsPage .projectsListHeaderAndIcon .icon {
+  margin-left: 20px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+  .projectsPage .projectsListHeaderAndIcon {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .projectsPage .projectsListHeaderAndIcon .icon {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+
 .projectsPage .projectsList {
   padding-left: 0;
   list-style-type: none;

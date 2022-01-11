@@ -1,6 +1,6 @@
 import "./AboutMe.css";
 import "../sharedFeatures.css";
-
+import { useEffect } from "react";
 //Front-end icons
 import pugIcon from "../../assets/images/homePage/mongoose_files/pug.png";
 import htmlIcon from "../../assets/images/homePage/mongoose_files/html5.png";
@@ -9,6 +9,7 @@ import jsIcon from "../../assets/images/homePage/mongoose_files/javascript.png";
 import reactIcon from "../../assets/images/homePage/mongoose_files/react.png";
 import sassIcon from "../../assets/images/homePage/mongoose_files/sass.png";
 import axiosIcon from "../../assets/images/homePage/axios.png";
+import typescriptIcon from "../../assets/images/homePage/typescriptIcon.svg";
 // import nextIcon from "../assets/images/homePage/mongoose_files/next.png";
 //Back-end icons
 import nodejsIcon from "../../assets/images/homePage/mongoose_files/nodejs.png";
@@ -34,6 +35,10 @@ import jestIcon from "../../assets/images/homePage/mongoose_files/jest.png";
 function AboutMe({ currentTheme, borderTheme }) {
   const changeBorderColor = borderTheme;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const renderIcons = (iconNameAndImgArray) => {
     return iconNameAndImgArray.map((icon) => {
       return (
@@ -57,6 +62,7 @@ function AboutMe({ currentTheme, borderTheme }) {
     [reactIcon, "React / React Native"],
     [pugIcon, "PUG"],
     [axiosIcon, "Axios"],
+    [typescriptIcon, "Typescript"],
   ];
 
   const backEndIconArray = [
