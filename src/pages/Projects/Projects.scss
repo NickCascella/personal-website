@@ -14,6 +14,9 @@
     justify-content: space-between;
     align-items: center;
     line-height: 50px;
+    .programTitle {
+      font-size: 50px;
+    }
     .icon {
       margin-left: 20px;
       width: 100px;
@@ -51,6 +54,9 @@
   INDIVIDUAL PROJECTS
   =================
   */
+  }
+  .specificProjectHeader {
+    font-size: 35px;
   }
   .projectKeyFeatures {
     list-style: none;

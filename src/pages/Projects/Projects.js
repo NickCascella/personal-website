@@ -16,6 +16,7 @@ function Projects(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   if (!programData) {
     return <Redirect to={"/home/projects"} />;
   }
@@ -46,6 +47,7 @@ function Projects(props) {
                 state: {
                   specificProject: projectLinkInfo[key].state,
                   projectData: programData.projectData,
+                  headerStyle: programData.programDetails.titleStyle,
                 },
               }}
               key={`${projectLinkInfo[key].path} link`}
@@ -89,7 +91,10 @@ function Projects(props) {
     >
       <div className="projectsListHeaderAndIcon">
         <h2>
-          <span style={programData.programDetails.titleStyle}>
+          <span
+            className="programTitle"
+            style={programData.programDetails.titleStyle}
+          >
             {programData.programDetails.title}
           </span>
         </h2>
@@ -113,6 +118,7 @@ function Projects(props) {
 const RenderProject = ({ currentTheme, borderTheme }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(locationData);
   }, []);
 
   const location = useLocation();
@@ -126,17 +132,18 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
   const uniqueId = () => {
     return Math.random() * 1000000;
   };
-  if (!specificProject) {
-    return <Redirect to={"/home/projects"} />;
-  }
+  // if (!specificProject) {
+  //   return <Redirect to={"/home/projects"} />;
+  // }
 
   return (
     <div
       className="projectsPage specificProject fadeIn"
       style={{ borderColor: changeBorderColor() }}
     >
-      {}
-      <h2>{specificProject.title}</h2>
+      <h2 className="specificProjectHeader" style={locationData.headerStyle}>
+        {specificProject.title}
+      </h2>
       <h3>Project Description</h3>
       <p>{specificProject.description}</p>
       <ul className="projectKeyFeatures">

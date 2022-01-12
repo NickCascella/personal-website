@@ -40,4 +40,8 @@
   font-weight: bold;
   background-size: cover;
 }
+
+.socialMediaLinksList a .socialMediaName {
+  margin-left: 8px;
+}
 /*# sourceMappingURL=SocialMediaList.css.map */

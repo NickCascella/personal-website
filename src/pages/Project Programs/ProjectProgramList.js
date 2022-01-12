@@ -26,7 +26,10 @@ const ProjectProgramsPage = ({ currentTheme }) => {
   };
 
   return (
-    <div className="projectsProgramPage fadeIn">
+    <div
+      className="projectsProgramPage fadeIn"
+      style={{ borderColor: currentTheme.color }}
+    >
       <h1>Programs</h1>
       <div
         className="program"
@@ -72,7 +75,6 @@ const ProjectProgramsPage = ({ currentTheme }) => {
                 titleStyle: {
                   fontFamily: "norseregular",
                   color: "#cc9543",
-                  fontSize: "50px",
                 },
               },
             },
@@ -138,7 +140,6 @@ const ProjectProgramsPage = ({ currentTheme }) => {
                 titleStyle: {
                   fontFamily: "Roberto",
                   color: "#1358db",
-                  fontSize: "50px",
                 },
               },
             },

@@ -33,6 +33,10 @@
   line-height: 50px;
 }
 
+.projectsPage .projectsListHeaderAndIcon .programTitle {
+  font-size: 50px;
+}
+
 .projectsPage .projectsListHeaderAndIcon .icon {
   margin-left: 20px;
   width: 100px;
@@ -84,6 +88,10 @@
 
 .projectsPage .projectsList .projectLanguage {
   margin-right: 1em;
+}
+
+.projectsPage .specificProjectHeader {
+  font-size: 35px;
 }
 
 .projectsPage .projectKeyFeatures {

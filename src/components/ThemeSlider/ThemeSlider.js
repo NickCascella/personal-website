@@ -1,15 +1,21 @@
 import "./ThemeSlider.css";
-import moonIcon from "../../assets/images/homePage/moonIcon.png";
-import sunIcon from "../../assets/images/homePage/sunIcon.png";
+// import moonIcon from "../../assets/images/homePage/moonIcon.png";
+// import sunIcon from "../../assets/images/homePage/sunIcon.png";
+import { FaLightbulb } from "react-icons/fa";
 
 const ThemeSlider = ({ setDarkThemeOn, currentTheme }) => {
   const checkTheme = () => {
-    return currentTheme.color === "white" ? moonIcon : sunIcon;
+    return currentTheme.color === "white" ? (
+      <FaLightbulb size={30} className="slider round" alt="Slider for switch" />
+    ) : (
+      <FaLightbulb size={30} className="slider round" alt="Slider for switch" />
+    );
+    // return currentTheme.color === "white" ? moonIcon : sunIcon;
   };
 
-  const backgroundColor = () => {
-    return currentTheme.color === "white" ? "black" : "rgba(17, 117, 248, 1)";
-  };
+  // const backgroundColor = () => {
+  //   return currentTheme.color === "white" ? "black" : "rgba(17, 117, 248, 1)";
+  // };
 
   const trackColor = () => {
     return currentTheme.color === "white"
@@ -26,13 +32,14 @@ const ThemeSlider = ({ setDarkThemeOn, currentTheme }) => {
             setDarkThemeOn(!e.target.checked);
           }}
         ></input>
+        {checkTheme()}
 
-        <img
+        {/* <img
           className="slider round"
           alt="Slider for switch"
           src={checkTheme()}
           style={{ backgroundColor: backgroundColor() }}
-        ></img>
+        ></img> */}
       </label>
     </div>
   );
