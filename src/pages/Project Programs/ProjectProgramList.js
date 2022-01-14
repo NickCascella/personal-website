@@ -56,12 +56,17 @@ const ProjectProgramsPage = ({ currentTheme }) => {
           April 2021 - present
         </h4>
         <p className="programDetails">
-          "The Odin Project is one of those "What I wish I had when I was
-          learning" resources. Not everyone has access to a computer science
-          education or the funds to attend an intensive coding school and
-          neither of those is right for everyone anyway. This project is
-          designed to fill in the gap for people who are trying to hack it on
-          their own but still want a high quality education."
+          Where it all began. The Odin Project has taught me a great deal and is
+          what drove me to seriously consider being a web developer and take the
+          step forward for the career change. I have dedicated quite some time
+          into making these projects that test and teach a variety of important
+          skills both on the front-end and back-end. I feel this program has
+          been a great start to my journey and I hope showcases I have the
+          interest, determination and ability to learn and work with an
+          assortment of tools in order to make my goal of becoming a full-stack
+          developer a reality. I know I still have a great deal to learn and
+          that the learning never ends but the only way is up and I will get
+          there one project at a time.
         </p>
         <Link
           to={{
@@ -76,6 +81,9 @@ const ProjectProgramsPage = ({ currentTheme }) => {
                   fontFamily: "norseregular",
                   color: "#cc9543",
                 },
+                bio: "Here is a list of some of the more key projects I have completed up\
+                until this point. If you view my Github profile, you can see the full\
+                list of projects I have completed that are not included here.",
               },
             },
           }}
@@ -118,15 +126,13 @@ const ProjectProgramsPage = ({ currentTheme }) => {
           January 2021 - April 2021
         </h4>
         <p className="programDetails">
-          "BrainStation is more than a Web Development bootcamp: it's a career
-          transformation experience. Beyond learning the essential technical
-          skills you'll need to start a new career as a Web Developer, you'll
-          gain hands-on, industry experience through unique real-world projects
-          where you'll work alongside industry professionals on real business
-          problems and collaborate with designers, data scientists, and digital
-          marketers to deliver a real-world solution. See why thousands of
-          graduates have launched their new careers with BrainStation through
-          this Web Development bootcamp."
+          The next phase of my journey. Taught by industry professionals, I
+          enrolled in Brainstation to learn what I could not being self taught.
+          This program has been proven to create quality web developers and I
+          hope to be able to call myself one by the end of it. This program
+          builds upon and goes beyond the topics I have learned previously
+          through The Odin Project. I am excited for what the program has in
+          store as well as the people I will meet throughout my time here.
         </p>
         <Link
           to={{
@@ -141,6 +147,7 @@ const ProjectProgramsPage = ({ currentTheme }) => {
                   fontFamily: "Roberto",
                   color: "#1358db",
                 },
+                bio: "A list of future Brainstation projects soon to come..stay tuned.",
               },
             },
           }}

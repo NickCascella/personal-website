@@ -1,7 +1,7 @@
 .projectsPage {
   display: flex;
   flex-direction: column;
-  padding-left: 1em;
+  padding: 0 1em;
   line-height: 150%;
   border-left: 1px solid black;
   overflow-x: hidden;
@@ -16,6 +16,7 @@
     line-height: 50px;
     .programTitle {
       font-size: 50px;
+      line-height: 150%;
     }
     .icon {
       margin-left: 20px;
@@ -33,6 +34,9 @@
   .projectsList {
     padding-left: 0;
     list-style-type: none;
+    .projectMonth {
+      margin: 40px 0;
+    }
     li {
       display: flex;
       justify-content: space-between;
@@ -57,6 +61,7 @@
   }
   .specificProjectHeader {
     font-size: 35px;
+    line-height: 40px;
   }
   .projectKeyFeatures {
     list-style: none;

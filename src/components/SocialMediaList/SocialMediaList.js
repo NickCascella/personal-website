@@ -7,17 +7,17 @@ const SocialMediaList = ({ currentTheme }) => {
   const newSocialMediaArray = [
     {
       link: "https://github.com/NickCascella?tab=repositories",
-      icon: <SiGithub size={16} />,
+      icon: <SiGithub />,
       handle: "Nick Cascella",
     },
     {
       link: "mailto:cascella3509@gmail.com?subject=Congratulations.%20You%20got%20the%20job!",
-      icon: <FcGoogle size={16} />,
+      icon: <FcGoogle />,
       handle: "cascella3509@gmail.com",
     },
     {
       link: "https://www.linkedin.com/in/nick-cascella-a9546b14b/",
-      icon: <SiLinkedin size={14} />,
+      icon: <SiLinkedin />,
       handle: "Nick Cascella",
     },
   ];

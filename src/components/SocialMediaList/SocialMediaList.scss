@@ -18,16 +18,11 @@
     align-items: center;
     text-decoration: none;
     color: black;
-
-    .socialMediaIcon {
-      margin-right: 0.1em;
-      width: 16px;
-      height: 16px;
-      font-weight: bold;
-      background-size: cover;
-    }
+    height: min-content;
     .socialMediaName {
       margin-left: 8px;
+
+      font-size: 20px;
     }
   }
 }

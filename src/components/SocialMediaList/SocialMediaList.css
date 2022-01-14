@@ -31,17 +31,13 @@
           align-items: center;
   text-decoration: none;
   color: black;
-}
-
-.socialMediaLinksList a .socialMediaIcon {
-  margin-right: 0.1em;
-  width: 16px;
-  height: 16px;
-  font-weight: bold;
-  background-size: cover;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .socialMediaLinksList a .socialMediaName {
   margin-left: 8px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=SocialMediaList.css.map */

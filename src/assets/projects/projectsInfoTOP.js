@@ -4,10 +4,10 @@ const projectsData = {
   blog: {
     title: "Blog Project",
     description:
-      "First project where front-end and back-end sites are seperated. Two front-end sites: one for admins to implement CRUD for blogs and nne for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
+      "First project where front-end and back-end sites are seperated. Two front-end sites: One for admins to implement CRUD for blogs and one for general users to implement CRUD for comments on said blogs. One dedicated back-end site to receive and authenticate requests.",
     features: [
-      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
-      "A signup and login feature to access the sites, the user is stored in a JWT.",
+      "Utilizies Node with Express back-end, as well as uses the database MongoDb paired with Mongoose.",
+      "A signup and login feature to access the sites, the user data is stored in a JWT.",
       "Json web token based authentication through PassportJs.",
       "The back-end authentication utilizes CORS to only permit these two front-ends to send requests for security purposes.",
       "Both front-end sites use Axios to make CRUD requests (POST,GET,PUT,DELETE).",
@@ -16,11 +16,17 @@ const projectsData = {
     ],
     downsides: [
       "Does not utilize refresh tokens, as a result the access token the user is granted will expire in 20 minutes requiring them to login once more.",
-      "Since this is not session based and because the token is not stored in a cookie, refreshing the page will cause the user to lose the token causing them to sign out.",
+      "Since this is not session based and because the token is not stored client side, refreshing the page will cause the user to lose the token causing them to sign out.",
     ],
     links: [
-      ["Blog User Portal", "https://blog-user-portal-top.herokuapp.com/"],
-      ["Blog Admin Portal", "https://agile-plains-23571.herokuapp.com/"],
+      [
+        "Blog User Portal - Signup here",
+        "https://blog-user-portal-top.herokuapp.com/",
+      ],
+      [
+        "Blog Admin Portal - ADMIN CODE: 111",
+        "https://agile-plains-23571.herokuapp.com/",
+      ],
       ["Blog Server", "https://enigmatic-harbor-91646.herokuapp.com/"],
     ],
   },
@@ -29,35 +35,40 @@ const projectsData = {
     description:
       "A back-end focused project where you must create an account to join a messaging forum. There are also membership tiers you can obtain which provide access to more features on the site.",
     features: [
-      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
+      "Utilizies Node with Express back-end, as well as the database MongoDb paired with Mongoose.",
       "A signup and login feature to access the site, the user and account tier is stored in the session.",
-      "Session based authentication with PassportJs. User may upgrade their account tier through entering certain codes to gain access to various perks.",
-      "Uses GET and POST requests fetch, create, and delete data from the database.",
-      "Uses the view engine PUG to render static pages as well as dynamic data from the database.",
+      "Session based authentication with PassportJs. User may upgrade their account tier through entering certain codes to gain access to various privileges.",
+      "Uses GET and POST requests to fetch, create, and delete data from the database.",
+      "Uses the view engine PUG to render pages as well as dynamic data from the database.",
       "Mobile support.",
     ],
     downsides: [
       "Uses POST requests to make all update, fetch, and delete requests. Did not yet teach PUT or DELETE options to simplify the lesson.",
-      "Back-end and Front-end hosted together on the same site.",
+      "Back-end and front-end hosted together on the same site.",
     ],
-    links: [["Members Only", "https://members-admins-only.herokuapp.com/home"]],
+    links: [
+      [
+        "Members Only - MEMBERS CODE: Members01",
+        "https://members-admins-only.herokuapp.com/home",
+      ],
+    ],
   },
   breadStore: {
     title: "Bread Store",
     description:
       "First back-end focused project whereby you may purchases various breads from select bread brands and add them to a shopping cart. You may also create said brands on the site as well as their various breads.",
     features: [
-      "Utilizies Node with Express back-end as well as the database MongoDb used with Mongoose.",
+      "Utilizies Node with Express back-end, as well as the database MongoDb paired with Mongoose.",
       "Taught the basics of making GET and POST requests to the server to fetch, create, update, and delete data from the database.",
       "Taught the idea of basic authetnication for requiring passcodes to make certain requests such as updating or deleting brands/certain breads.",
-      "Introduced me to the view engine PUG to render static pages as well as dynamic data from the database.",
+      "Introduced me to the view engine PUG to render pages as well as dynamic data from the database.",
       "Used the middleware Multer to allow the uploading of images to the site.",
       "Introduced me to .env file types to protect certain pieces of data.",
       "Mobile support",
     ],
     downsides: [
       "Uses POST requests to make all update, fetch, and delete requests. Did not yet teach PUT or DELETE options to simplify the lesson.",
-      "Back-end and Front-end hosted together on the same site.",
+      "Back-end and front-end hosted together on the same site.",
       "No login required. The shopping cart is the same for all users.",
       "Multer only saves images on the local device sending them, only the reference to the image goes to the database. Meaning other devices cannot see these images as only the reference to the local image is saved to the database.",
     ],
@@ -137,8 +148,8 @@ const projectsData = {
     ],
     downsides: [
       "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide.",
-      "First big application. The code base is not very structured. Learned a lot of organziational tips for future projects.",
-      "Bugs are still present in the application.",
+      "First big application. The code base is not structured. Learned a lot of organziational tips for future projects.",
+      "Bugs are still present in the application as the code base was built many months prior when I had much less experience.",
     ],
     links: [["Twitter Clone", "https://twitter-clone-848fe.web.app/"]],
   },
@@ -148,6 +159,7 @@ const projectsData = {
       "The game Where's Waldo with multiple characters to find, you must find them in the fastest time possible in order to get the best score. This project uses a React front-end and a Firebase hosted back-end. This was my first project using a back-end for data storage, where data on user highscores and character positions are kept and retrieved for their respective purposes.",
     features: [
       "Taught me how to store, retrieve, and organize information from a database.",
+      "Displays the top high scores, see if you can beat the top 5! ",
     ],
     downsides: [
       "Responsive design was not taught at this point in the course, PLEASE USE ON DEVICES WITH DISPLAYS ~ 1600px wide or wider.",
@@ -157,7 +169,7 @@ const projectsData = {
   odinShop: {
     title: "Odin Shop",
     description:
-      "My first multi-page application using React. This project is an online store where you can purchase Pokemon and Pokemon related items using a Pokemon API.",
+      "My first real single-page application using React. This project is an online store where you can purchase Pokemon and Pokemon related items using a Pokemon API.",
     features: [
       "Uses different sets of API calls to retrieve data on various Pokemon to be displayed.",
       "Uses React router to dynamically load into pages based off which pokemon or item the user has clicked.",

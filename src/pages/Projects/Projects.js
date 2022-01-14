@@ -1,16 +1,14 @@
 import "./Projects.css";
 import "../sharedFeatures.css";
 //DEPENDENCIES
+import { v4 as uuidv4 } from "uuid";
 import { Link, useLocation, Redirect } from "react-router-dom";
 import odinIcon from "../../assets/images/projects/odinIcon.svg";
 import brainstationDarkIcon from "../../assets/images/projects/brainstationDarkIcon.png";
 import brainstationLightIcon from "../../assets/images/projects/brainstationLightIcon.png";
 import { useEffect } from "react";
 
-function Projects(props) {
-  const currentTheme = props.currentTheme;
-  const checkSpecialStyling = props.specialStyling;
-  const changeBorderColor = props.borderTheme;
+function Projects({ currentTheme, specialStyling, borderTheme }) {
   const location = useLocation();
   const programData = location.state;
   useEffect(() => {
@@ -40,44 +38,55 @@ function Projects(props) {
       <ul aria-label="List of completed projects." className="projectsList">
         {arrayOfLinkKeys.map((key) => {
           return (
-            <Link
-              className="projectTitle"
-              to={{
-                pathname: projectLinkInfo[key].path,
-                state: {
-                  specificProject: projectLinkInfo[key].state,
-                  projectData: programData.projectData,
-                  headerStyle: programData.programDetails.titleStyle,
-                },
-              }}
-              key={`${projectLinkInfo[key].path} link`}
-            >
-              <li
-                style={{ color: currentTheme.color }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.color = checkSpecialStyling("true");
+            <div key={uuidv4()}>
+              {projectLinkInfo[key].month && (
+                <h3
+                  key={uuidv4()}
+                  style={programData.programDetails.titleStyle}
+                  className="projectMonth"
+                >
+                  {projectLinkInfo[key].month}
+                </h3>
+              )}
+              <Link
+                className="projectTitle"
+                to={{
+                  pathname: projectLinkInfo[key].path,
+                  state: {
+                    specificProject: projectLinkInfo[key].state,
+                    projectData: programData.projectData,
+                    headerStyle: programData.programDetails.titleStyle,
+                  },
                 }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = checkSpecialStyling("false");
-                }}
+                key={`${projectLinkInfo[key].path} link`}
               >
-                <span className="projectName pageLinksUnderline">
-                  {projectLinkInfo[key].title}
-                </span>{" "}
-                <span className="projectLanguage">
-                  {projectLinkInfo[key].packagesUsed.map((item) => {
-                    if (
-                      projectLinkInfo[key].packagesUsed.indexOf(item) ===
-                      projectLinkInfo[key].packagesUsed.length - 1
-                    ) {
-                      return `${item} `;
-                    } else {
-                      return `${item} / `;
-                    }
-                  })}
-                </span>
-              </li>
-            </Link>
+                <li
+                  style={{ color: currentTheme.color }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.color = specialStyling("true");
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = specialStyling("false");
+                  }}
+                >
+                  <span className="projectName pageLinksUnderline">
+                    {projectLinkInfo[key].title}
+                  </span>{" "}
+                  <span className="projectLanguage">
+                    {projectLinkInfo[key].packagesUsed.map((item) => {
+                      if (
+                        projectLinkInfo[key].packagesUsed.indexOf(item) ===
+                        projectLinkInfo[key].packagesUsed.length - 1
+                      ) {
+                        return `${item} `;
+                      } else {
+                        return `${item} / `;
+                      }
+                    })}
+                  </span>
+                </li>
+              </Link>
+            </div>
           );
         })}
       </ul>
@@ -85,10 +94,7 @@ function Projects(props) {
   };
 
   return (
-    <div
-      className="projectsPage fadeIn"
-      style={{ borderColor: changeBorderColor() }}
-    >
+    <div className="projectsPage fadeIn" style={{ borderColor: borderTheme() }}>
       <div className="projectsListHeaderAndIcon">
         <h2>
           <span
@@ -104,11 +110,7 @@ function Projects(props) {
           src={checkIcons(programData.programDetails.icon)}
         ></img>
       </div>
-      <p>
-        Here is a list of some of the projects I have completed up until this
-        point. If you view my Github, you can see the full list I have done but
-        not included here.
-      </p>
+      <p>{programData.programDetails.bio}</p>
       <p>Click a project below to learn more!</p>
       {renderLinks()}
     </div>
@@ -118,7 +120,6 @@ function Projects(props) {
 const RenderProject = ({ currentTheme, borderTheme }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log(locationData);
   }, []);
 
   const location = useLocation();
@@ -129,12 +130,6 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
   const projectsData = locationData.projectData;
   const specificProject = projectsData[locationData.specificProject];
   const changeBorderColor = borderTheme;
-  const uniqueId = () => {
-    return Math.random() * 1000000;
-  };
-  // if (!specificProject) {
-  //   return <Redirect to={"/home/projects"} />;
-  // }
 
   return (
     <div
@@ -148,12 +143,12 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
       <p>{specificProject.description}</p>
       <ul className="projectKeyFeatures">
         {specificProject.features.map((feature) => {
-          return <li key={uniqueId()}>{feature}</li>;
+          return <li key={uuidv4()}>{feature}</li>;
         })}
       </ul>
       <ul className="projectKeyFeatures projectDownsides">
         {specificProject.downsides.map((feature) => {
-          return <li key={uniqueId()}>{feature}</li>;
+          return <li key={uuidv4()}>{feature}</li>;
         })}
       </ul>
       {specificProject.links.length > 0 &&
@@ -165,7 +160,7 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
               href={linkData[1]}
               target="_blank"
               rel="noreferrer"
-              key={uniqueId()}
+              key={uuidv4()}
             >
               {linkData[0]}
             </a>
@@ -174,7 +169,7 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
       {specificProject.imgs &&
         specificProject.imgs.map((img) => {
           return (
-            <div>
+            <div key={uuidv4()}>
               <h3 className="projectImgsTitle">{img[2]}</h3>
               <img className="projectImg" src={img[0]} alt={img[1]}></img>
             </div>

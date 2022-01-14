@@ -25,21 +25,15 @@ import {
 const RenderSkillsIcons = ({ currentTheme }) => {
   const iconSize = 80;
   const frontEndIconArray = [
-    [
-      <ImHtmlFive2 size={iconSize} color="orange" className="icon" />,
-      "HyperText Markup Language",
-    ],
-    [
-      <SiCss3 size={iconSize} color="blue" className="icon" />,
-      "Cascading Style Sheets",
-    ],
+    [<ImHtmlFive2 size={iconSize} color="orange" className="icon" />, "HTML"],
+    [<SiCss3 size={iconSize} color="blue" className="icon" />, "CSS"],
     [
       <SiJavascript
         size={iconSize}
         style={{ color: "rgb(227, 227, 6)", borderRadius: "5px" }}
         className="icon"
       />,
-      "Java Script",
+      "JavaScript",
     ],
 
     [
@@ -48,11 +42,11 @@ const RenderSkillsIcons = ({ currentTheme }) => {
         style={{ color: "rgb(87, 213, 255)" }}
         className="icon"
       />,
-      "React/React Native",
+      "React/Native",
     ],
     [
       <DiSass size={iconSize} style={{ color: "pink" }} className="icon" />,
-      "Syntactically Awesome Style Sheets",
+      "SASS",
     ],
     [
       <SiPug size={iconSize} style={{ color: "brown" }} className="icon" />,
