@@ -17,7 +17,7 @@ import SocialMediaList from "../../components/SocialMediaList/SocialMediaList";
 import AboutMe from "../About Me/AboutMe";
 import Projects from "../Projects/Projects";
 import ProjectProgramsPage from "../Project Programs/ProjectProgramList";
-import { RenderProject } from "../Projects/Projects";
+import RenderProject from "../Specific Project/RenderProject";
 
 function HomePage() {
   useEffect(() => {

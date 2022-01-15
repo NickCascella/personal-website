@@ -1,0 +1,46 @@
+.projectsPage {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  line-height: 150%;
+  border-left: 1px solid black;
+  overflow-x: hidden;
+  @media only screen and (max-width: 1100px) {
+    border-left: none;
+  }
+
+  .specificProjectHeader {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .projectKeyFeatures {
+    list-style: none;
+    padding-left: 0;
+    li {
+      width: 100%;
+      padding-top: 5px;
+      &:before {
+        content: "✓";
+        display: inline-block;
+        padding-right: 0.2em;
+      }
+    }
+  }
+  .projectDownsides li:before {
+    content: "X";
+  }
+  .projectLink {
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+  }
+  .projectImgsTitle {
+    margin: 34.5px 0;
+    font-size: 18px;
+  }
+  .projectImg {
+    border-radius: 5px;
+    max-width: 150px;
+  }
+}

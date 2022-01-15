@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .projectsPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,11 +56,6 @@
 .projectsPage .projectsList {
   padding-left: 0;
   list-style-type: none;
-  /*
-  =================
-  INDIVIDUAL PROJECTS
-  =================
-  */
 }
 
 .projectsPage .projectsList .projectMonth {
@@ -93,47 +87,5 @@
 
 .projectsPage .projectsList .projectLanguage {
   margin-right: 1em;
-}
-
-.projectsPage .specificProjectHeader {
-  font-size: 35px;
-  line-height: 40px;
-}
-
-.projectsPage .projectKeyFeatures {
-  list-style: none;
-  padding-left: 0;
-}
-
-.projectsPage .projectKeyFeatures li {
-  width: 100%;
-  padding-top: 5px;
-}
-
-.projectsPage .projectKeyFeatures li:before {
-  content: "✓";
-  display: inline-block;
-  padding-right: 0.2em;
-}
-
-.projectsPage .projectDownsides li:before {
-  content: "X";
-}
-
-.projectsPage .projectLink {
-  margin: 0 auto;
-  text-align: center;
-  white-space: nowrap;
-  position: relative;
-}
-
-.projectsPage .projectImgsTitle {
-  margin: 34.5px 0;
-  font-size: 18px;
-}
-
-.projectsPage .projectImg {
-  border-radius: 5px;
-  max-width: 150px;
 }
 /*# sourceMappingURL=Projects.css.map */
