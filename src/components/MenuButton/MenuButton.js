@@ -1,9 +1,11 @@
 import "./MenuButton.css";
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-const MenuButton = ({ currentTheme }) => {
+const MenuButton = () => {
+  const theme = useSelector((store) => store.theme);
   const [toggleClass, setToggleClass] = useState(false);
+
   const addMenuAnimation = () => {
     return toggleClass ? "change" : "noChange";
   };
@@ -16,10 +18,7 @@ const MenuButton = ({ currentTheme }) => {
     <div
       className="menuContainer"
       onMouseLeave={() => {
-        if (toggleClass) {
-          toggleMenu();
-        }
-        return;
+        return toggleClass ? toggleMenu() : null;
       }}
     >
       <div
@@ -28,18 +27,9 @@ const MenuButton = ({ currentTheme }) => {
           toggleMenu();
         }}
       >
-        <div
-          className="bar1"
-          style={{ backgroundColor: currentTheme.color }}
-        ></div>
-        <div
-          className="bar2"
-          style={{ backgroundColor: currentTheme.color }}
-        ></div>
-        <div
-          className="bar3"
-          style={{ backgroundColor: currentTheme.color }}
-        ></div>
+        <div className="bar1" style={{ backgroundColor: theme.color }}></div>
+        <div className="bar2" style={{ backgroundColor: theme.color }}></div>
+        <div className="bar3" style={{ backgroundColor: theme.color }}></div>
       </div>
       <div className={`dropDownMenu ${addMenuAnimation()}`}>
         <Link
@@ -48,10 +38,7 @@ const MenuButton = ({ currentTheme }) => {
             toggleMenu();
           }}
         >
-          <div
-            className="dropDownPageLink one"
-            style={{ color: currentTheme.color }}
-          >
+          <div className="dropDownPageLink one" style={{ color: theme.color }}>
             {" "}
             About Me{" "}
           </div>
@@ -62,10 +49,7 @@ const MenuButton = ({ currentTheme }) => {
             toggleMenu();
           }}
         >
-          <div
-            className="dropDownPageLink two"
-            style={{ color: currentTheme.color }}
-          >
+          <div className="dropDownPageLink two" style={{ color: theme.color }}>
             {" "}
             Programs{" "}
           </div>

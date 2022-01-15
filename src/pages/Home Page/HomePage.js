@@ -9,6 +9,7 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 //COMPONENTS
 import MenuButton from "../../components/MenuButton/MenuButton";
 import ThemeSlider from "../../components/ThemeSlider/ThemeSlider";
@@ -18,46 +19,40 @@ import Projects from "../Projects/Projects";
 import ProjectProgramsPage from "../Project Programs/ProjectProgramList";
 import { RenderProject } from "../Projects/Projects";
 
-function HomePage({ currentTheme, setDarkThemeOn }) {
+function HomePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const theme = useSelector((store) => store.theme);
+
   const checkSpecialStyling = (hover) => {
     if (
-      (currentTheme.color === "white" && hover === "true") ||
-      currentTheme.color === "black"
+      (theme.color === "white" && hover === "true") ||
+      theme.color === "black"
     ) {
       return "black";
     } else return "white";
   };
 
-  const changeBorderColor = () => {
-    return currentTheme.color === "white" ? "white" : "black";
-  };
-
   const switchClass = (classOneDarkTheme, classTwoLightTheme) => {
-    return currentTheme.color === "white"
-      ? classOneDarkTheme
-      : classTwoLightTheme;
+    return theme.color === "white" ? classOneDarkTheme : classTwoLightTheme;
   };
 
   return (
-    <div className="homePage" style={{ color: currentTheme.color }}>
+    <div className="homePage" style={{ color: theme.color }}>
       <Router basename="/personal-website">
         <nav
           className="siteNavigation fadeInLeft"
-          style={{ borderColor: changeBorderColor() }}
+          style={{ borderColor: theme.color }}
         >
           <h1 className={switchClass("headerDarkmode", "headerLightmode")}>
             Nicholas Cascella
           </h1>
-
-          <SocialMediaList currentTheme={currentTheme} />
-
+          <SocialMediaList />
           <ul className="pageLinks">
             <Link to="/home/About-Me">
               <li
-                style={{ color: currentTheme.color }}
+                style={{ color: theme.color }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.color = checkSpecialStyling("true");
                 }}
@@ -70,7 +65,7 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
             </Link>
             <Link to="/home/Projects">
               <li
-                style={{ color: currentTheme.color }}
+                style={{ color: theme.color }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.color = checkSpecialStyling("true");
                 }}
@@ -83,11 +78,8 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
             </Link>
           </ul>
           <div className="menuAndSwitchContainer">
-            <MenuButton currentTheme={currentTheme} />
-            <ThemeSlider
-              setDarkThemeOn={setDarkThemeOn}
-              currentTheme={currentTheme}
-            />
+            <MenuButton />
+            <ThemeSlider />
           </div>
         </nav>
         <section className="displayedPage">
@@ -96,30 +88,19 @@ function HomePage({ currentTheme, setDarkThemeOn }) {
               <Redirect to="/home/About-Me" />
             </Route>
             <Route path="/home/About-Me">
-              <AboutMe
-                currentTheme={currentTheme}
-                borderTheme={changeBorderColor}
-              ></AboutMe>
+              <AboutMe />
             </Route>
             <Route exact path="/home/Projects">
-              <ProjectProgramsPage
-                borderTheme={changeBorderColor}
-                currentTheme={currentTheme}
-                specialStyling={checkSpecialStyling}
-              />
+              <ProjectProgramsPage />
             </Route>
             <Route exact path="/home/Projects/:projectProgram">
-              <Projects
-                borderTheme={changeBorderColor}
-                currentTheme={currentTheme}
-                specialStyling={checkSpecialStyling}
-              ></Projects>
+              <Projects specialStyling={checkSpecialStyling} />
             </Route>
             <Route path="/home/Projects/:projectProgram/:project">
-              <RenderProject
-                currentTheme={currentTheme}
-                borderTheme={changeBorderColor}
-              ></RenderProject>
+              <RenderProject />
+            </Route>
+            <Route path="*">
+              <Redirect to="/home/About-Me" />
             </Route>
           </Switch>
         </section>

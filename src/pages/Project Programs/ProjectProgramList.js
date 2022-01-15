@@ -8,19 +8,21 @@ import projectLinksBrainStation from "../../assets/projects/projectLinkInfoBrain
 import odinIcon from "../../assets/images/projects/odinIcon.svg";
 import brainstationDarkIcon from "../../assets/images/projects/brainstationDarkIcon.png";
 import brainstationLightIcon from "../../assets/images/projects/brainstationLightIcon.png";
+import { useSelector } from "react-redux";
 
-const ProjectProgramsPage = ({ currentTheme }) => {
+const ProjectProgramsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const theme = useSelector((store) => store.theme);
   const renderBackground = () => {
-    return currentTheme.color === "black"
+    return theme.color === "black"
       ? "rgba(0,0,0,0.3)"
       : "rgba(255,255,255,0.3)";
   };
 
   const renderDarkLightIcon = () => {
-    return currentTheme.color === "black"
+    return theme.color === "black"
       ? brainstationLightIcon
       : brainstationDarkIcon;
   };
@@ -28,13 +30,13 @@ const ProjectProgramsPage = ({ currentTheme }) => {
   return (
     <div
       className="projectsProgramPage fadeIn"
-      style={{ borderColor: currentTheme.color }}
+      style={{ borderColor: theme.color }}
     >
       <h1>Programs</h1>
       <div
         className="program"
         style={{
-          color: currentTheme.color,
+          color: theme.color,
           border: `1px solid ${renderBackground()}`,
         }}
       >
@@ -81,9 +83,9 @@ const ProjectProgramsPage = ({ currentTheme }) => {
                   fontFamily: "norseregular",
                   color: "#cc9543",
                 },
-                bio: "Here is a list of some of the more key projects I have completed up\
-                until this point. If you view my Github profile, you can see the full\
-                list of projects I have completed that are not included here.",
+                bio: `Here is a list of some of the more developed projects I have done up
+                until this point. If you view my Github, you can see the full
+                list of projects I have completed that are not included here.`,
               },
             },
           }}
@@ -99,7 +101,7 @@ const ProjectProgramsPage = ({ currentTheme }) => {
       <div
         className="program"
         style={{
-          color: currentTheme.color,
+          color: theme.color,
           border: `1px solid ${renderBackground()}`,
         }}
       >
@@ -112,7 +114,7 @@ const ProjectProgramsPage = ({ currentTheme }) => {
           href="https://brainstation.io/course/online/remote-web-development-bootcamp"
           target="_blank"
           rel="noreferrer"
-          style={{ color: currentTheme.color, fontStyle: "italic" }}
+          style={{ color: theme.color, fontStyle: "italic" }}
         >
           <h3
             className="programTitle"

@@ -7,8 +7,10 @@ import odinIcon from "../../assets/images/projects/odinIcon.svg";
 import brainstationDarkIcon from "../../assets/images/projects/brainstationDarkIcon.png";
 import brainstationLightIcon from "../../assets/images/projects/brainstationLightIcon.png";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-function Projects({ currentTheme, specialStyling, borderTheme }) {
+function Projects({ specialStyling }) {
+  const theme = useSelector((store) => store.theme);
   const location = useLocation();
   const programData = location.state;
   useEffect(() => {
@@ -24,7 +26,7 @@ function Projects({ currentTheme, specialStyling, borderTheme }) {
   const checkIcons = (icon) => {
     if (icon === odinIcon) {
       return odinIcon;
-    } else if (currentTheme.color === "black") {
+    } else if (theme.color === "black") {
       return brainstationLightIcon;
     } else {
       return brainstationDarkIcon;
@@ -61,7 +63,7 @@ function Projects({ currentTheme, specialStyling, borderTheme }) {
                 key={`${projectLinkInfo[key].path} link`}
               >
                 <li
-                  style={{ color: currentTheme.color }}
+                  style={{ color: theme.color }}
                   onMouseOver={(e) => {
                     e.currentTarget.style.color = specialStyling("true");
                   }}
@@ -94,7 +96,7 @@ function Projects({ currentTheme, specialStyling, borderTheme }) {
   };
 
   return (
-    <div className="projectsPage fadeIn" style={{ borderColor: borderTheme() }}>
+    <div className="projectsPage fadeIn" style={{ borderColor: theme.color }}>
       <div className="projectsListHeaderAndIcon">
         <h2>
           <span
@@ -117,7 +119,8 @@ function Projects({ currentTheme, specialStyling, borderTheme }) {
   );
 }
 
-const RenderProject = ({ currentTheme, borderTheme }) => {
+const RenderProject = () => {
+  const theme = useSelector((store) => store.theme);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -129,12 +132,11 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
   }
   const projectsData = locationData.projectData;
   const specificProject = projectsData[locationData.specificProject];
-  const changeBorderColor = borderTheme;
 
   return (
     <div
       className="projectsPage specificProject fadeIn"
-      style={{ borderColor: changeBorderColor() }}
+      style={{ borderColor: theme.color }}
     >
       <h2 className="specificProjectHeader" style={locationData.headerStyle}>
         {specificProject.title}
@@ -156,7 +158,7 @@ const RenderProject = ({ currentTheme, borderTheme }) => {
           return (
             <a
               className="projectLink"
-              style={{ color: currentTheme.color }}
+              style={{ color: theme.color }}
               href={linkData[1]}
               target="_blank"
               rel="noreferrer"

@@ -24,6 +24,7 @@
   bottom: 0;
   left: 0;
   background: rgba(77, 132, 184, 0.446);
+  transform-origin: bottom left;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
 }
@@ -33,6 +34,24 @@
   visibility: visible;
   transform: scaleX(1);
 }
+
+/* &::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  margin-top: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $font-primary;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+&:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} */
 
 /* PAGE LINK (SCALE/GREY COVER) ANIMATION */
 
@@ -50,7 +69,6 @@
     background-size: 200% 100%;
     background-position: right bottom;
   }
-  /* rgba(79, 149, 241, 0.452 */
 
   .pageLinks li:hover,
   .projectsList li:hover {

@@ -12,6 +12,7 @@ import {
   SiWebpack,
   SiJest,
   SiExpo,
+  SiRedux,
 } from "react-icons/si";
 import {
   DiSass,
@@ -21,8 +22,11 @@ import {
   DiGit,
   DiHeroku,
 } from "react-icons/di";
+import { useSelector } from "react-redux";
 
-const RenderSkillsIcons = ({ currentTheme }) => {
+const RenderSkillsIcons = () => {
+  const theme = useSelector((store) => store.theme);
+
   const iconSize = 80;
   const frontEndIconArray = [
     [<ImHtmlFive2 size={iconSize} color="orange" className="icon" />, "HTML"],
@@ -53,6 +57,10 @@ const RenderSkillsIcons = ({ currentTheme }) => {
       "PUG",
     ],
     [
+      <SiRedux size={iconSize} style={{ color: "purple" }} className="icon" />,
+      "Redux",
+    ],
+    [
       <SiTypescript
         size={iconSize}
         style={{ color: "rgb(83, 137, 218)" }}
@@ -74,7 +82,7 @@ const RenderSkillsIcons = ({ currentTheme }) => {
     [
       <SiExpress
         size={iconSize}
-        style={{ color: currentTheme.color }}
+        style={{ color: theme.color }}
         className="icon"
       />,
       "Express",
@@ -125,7 +133,7 @@ const RenderSkillsIcons = ({ currentTheme }) => {
     [
       <SiExpo
         size={iconSize}
-        style={{ color: currentTheme.color }}
+        style={{ color: theme.color }}
         className="icon"
       />,
       "Expo",

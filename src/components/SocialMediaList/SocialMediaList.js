@@ -2,8 +2,11 @@ import "./SocialMediaList.css";
 import { SiGithub } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { SiLinkedin } from "react-icons/si";
+import { useSelector } from "react-redux";
 
 const SocialMediaList = ({ currentTheme }) => {
+  const theme = useSelector((store) => store.theme);
+
   const newSocialMediaArray = [
     {
       link: "https://github.com/NickCascella?tab=repositories",
@@ -31,7 +34,7 @@ const SocialMediaList = ({ currentTheme }) => {
               href={item.link}
               target="_blank"
               rel="noreferrer"
-              style={{ color: currentTheme.color }}
+              style={{ color: theme.color }}
             >
               {item.icon}
               <span className="socialMediaName">{item.handle}</span>

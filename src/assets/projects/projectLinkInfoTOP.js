@@ -1,6 +1,6 @@
 const projectLinks = {
   blog: {
-    month: "January",
+    month: "January 2022",
     title: "Blog Project",
     path: "/home/Projects/Odin-Project/Blog",
     state: "blog",
@@ -15,7 +15,7 @@ const projectLinks = {
     ],
   },
   membersOnly: {
-    month: "December",
+    month: "December 2021",
     title: "Members Only",
     path: "/home/Projects/Odin-Project/MembersOnly",
     state: "membersOnly",
@@ -35,7 +35,7 @@ const projectLinks = {
     packagesUsed: ["PUG", "Node.js", "Express", "MongoDb", "Mongoose"],
   },
   puddl: {
-    month: "November",
+    month: "November 2021",
     title: "Puddl",
     path: "/home/Projects/Odin-Project/Puddl",
     state: "puddl",
@@ -48,14 +48,14 @@ const projectLinks = {
     ],
   },
   responsiveWebsites: {
-    month: "October",
+    month: "October 2021",
     title: "New Scientist & Smashing Magazine",
     path: "/home/Projects/Odin-Project/SmashingMagazine",
     state: "smashingMagazineAndNewScientist",
     packagesUsed: ["JS", "HTML", "CSS"],
   },
   whereIsWaldo: {
-    month: "September",
+    month: "September 2021",
     title: "Where's Waldo",
     path: "/home/Projects/Odin-Project/WhereIsWaldo",
     state: "whereIsWaldo",
@@ -80,7 +80,7 @@ const projectLinks = {
   //   packagesUsed: ["React", "JSX", "CSS"],
   // },s
   battleShip: {
-    month: "August",
+    month: "August 2021",
     title: "Battleship",
     path: "/home/Projects/Odin-Project/Battleship",
     state: "battleship",

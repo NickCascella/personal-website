@@ -2,19 +2,17 @@ import "./AboutMe.css";
 import "../sharedFeatures.css";
 import { useEffect } from "react";
 import RenderSkillsIcons from "../../components/SkillsIcons/SkillsIcon";
+import { useSelector } from "react-redux";
 
-function AboutMe({ currentTheme, borderTheme }) {
-  const changeBorderColor = borderTheme;
+function AboutMe() {
+  const theme = useSelector((store) => store.theme);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div
-      className="aboutMePage fadeIn"
-      style={{ borderColor: changeBorderColor() }}
-    >
+    <div className="aboutMePage fadeIn" style={{ borderColor: theme.color }}>
       <h2>About Me</h2>
       <div className="aboutMeList">
         <p>
@@ -35,7 +33,7 @@ function AboutMe({ currentTheme, borderTheme }) {
             href="https://www.theodinproject.com/"
             target="_blank"
             rel="noreferrer"
-            style={{ color: currentTheme.color, fontStyle: "italic" }}
+            style={{ color: theme.color, fontStyle: "italic" }}
           >
             The Odin Project,
           </a>{" "}
@@ -48,7 +46,7 @@ function AboutMe({ currentTheme, borderTheme }) {
             href="https://brainstation.io/course/online/remote-web-development-bootcamp"
             target="_blank"
             rel="noreferrer"
-            style={{ color: currentTheme.color, fontStyle: "italic" }}
+            style={{ color: theme.color, fontStyle: "italic" }}
           >
             Brain Stations Web Development Bootcamp
           </a>{" "}
@@ -57,7 +55,7 @@ function AboutMe({ currentTheme, borderTheme }) {
         </p>
       </div>
       <h2 className="skillsTitle">Skills</h2>
-      <RenderSkillsIcons currentTheme={currentTheme} />
+      <RenderSkillsIcons />
     </div>
   );
 }
