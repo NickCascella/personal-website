@@ -1,12 +1,11 @@
-@charset "UTF-8";
-.underlineAnimation, .projectsPage .projectLink {
+.underlineAnimation {
   font-style: italic;
   position: relative;
   -webkit-transition: opacity 0.35s ease-out;
   transition: opacity 0.35s ease-out;
 }
 
-.underlineAnimation::after, .projectsPage .projectLink::after {
+.underlineAnimation::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -25,12 +24,12 @@
   transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
 }
 
-.underlineAnimation:hover, .projectsPage .projectLink:hover {
+.underlineAnimation:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
-.underlineAnimation:hover::after, .projectsPage .projectLink:hover::after {
+.underlineAnimation:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
@@ -60,66 +59,4 @@
     color: black;
   }
 }
-
-.projectsPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 1em;
-  line-height: 150%;
-  border-left: 1px solid black;
-  overflow-x: hidden;
-}
-
-@media only screen and (max-width: 1300px) {
-  .projectsPage {
-    border-left: none;
-  }
-}
-
-.projectsPage .specificProjectHeader {
-  font-size: 35px;
-  line-height: 40px;
-}
-
-.projectsPage .projectKeyFeatures {
-  list-style: none;
-  padding-left: 0;
-}
-
-.projectsPage .projectKeyFeatures li {
-  width: 100%;
-  padding-top: 5px;
-}
-
-.projectsPage .projectKeyFeatures li:before {
-  content: "✓";
-  display: inline-block;
-  padding-right: 0.2em;
-}
-
-.projectsPage .projectDownsides li:before {
-  content: "X";
-}
-
-.projectsPage .projectLink {
-  margin: 0 auto;
-  text-align: center;
-  white-space: nowrap;
-  position: relative;
-}
-
-.projectsPage .projectImgsTitle {
-  margin: 34.5px 0;
-  font-size: 18px;
-}
-
-.projectsPage .projectImg {
-  border-radius: 5px;
-  max-width: 150px;
-}
-/*# sourceMappingURL=RenderProject.css.map */
+/*# sourceMappingURL=sharedFeaturesGlobal.css.map */

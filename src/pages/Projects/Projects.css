@@ -1,3 +1,58 @@
+.underlineAnimation {
+  font-style: italic;
+  position: relative;
+}
+
+.underlineAnimation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  margin-top: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3dabff;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.underlineAnimation:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+/* PAGE LINK (SCALE/GREY COVER) ANIMATION */
+@media only screen and (min-width: 500px) {
+  .linkFullCoverAnimation, .projectsPage .projectsList li {
+    text-decoration: none;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(187, 217, 253, 0.452)));
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(187, 217, 253, 0.452) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .linkFullCoverAnimation:hover, .projectsPage .projectsList li:hover {
+    background-position: left bottom;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    cursor: pointer;
+    font-weight: 900;
+    z-index: 9999;
+    color: black;
+  }
+}
+
 .projectsPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +67,7 @@
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .projectsPage {
     border-left: none;
   }

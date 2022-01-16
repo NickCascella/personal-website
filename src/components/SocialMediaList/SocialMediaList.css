@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1100px) {
+@media only screen and (min-width: 600px) and (max-width: 1300px) {
   .socialMediaLinksList {
     margin-bottom: 0;
   }

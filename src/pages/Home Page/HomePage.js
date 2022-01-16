@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import "../sharedFeatures.css";
+
 //DEEPENDENCIES
 import React, { useEffect } from "react";
 import {

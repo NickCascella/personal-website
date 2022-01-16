@@ -1,3 +1,5 @@
+@import "../sharedFeaturesGlobal.scss";
+
 @font-face {
   font-family: "norseregular";
   src: url("../../assets/fonts/norse-webfont.woff2") format("woff2"),
@@ -12,7 +14,7 @@
   flex-direction: column;
   border-left: 1px solid black;
   padding-left: 1em;
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1300px) {
     border-left: none;
   }
   .program {
@@ -47,11 +49,7 @@
     }
     .projectsLink,
     .programTitle {
-      transition: opacity 0.3s ease-in-out;
-      &:hover {
-        cursor: pointer;
-        opacity: 0.7;
-      }
+      @extend .underlineAnimation;
     }
   }
 }

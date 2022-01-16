@@ -1,5 +1,5 @@
 import "./Projects.css";
-import "../sharedFeatures.css";
+
 //DEPENDENCIES
 import { v4 as uuidv4 } from "uuid";
 import { Link, useLocation, Redirect } from "react-router-dom";

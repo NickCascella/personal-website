@@ -1,5 +1,4 @@
 import "./AboutMe.css";
-import "../sharedFeatures.css";
 import { useEffect } from "react";
 import RenderSkillsIcons from "../../components/SkillsIcons/SkillsIcon";
 import { useSelector } from "react-redux";

@@ -1,3 +1,65 @@
+.underlineAnimation, .homePage .siteNavigation .socialMediaLinksList li {
+  font-style: italic;
+  position: relative;
+  -webkit-transition: opacity 0.35s ease-out;
+  transition: opacity 0.35s ease-out;
+}
+
+.underlineAnimation::after, .homePage .siteNavigation .socialMediaLinksList li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  margin-top: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #418eeb;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.35s ease-out;
+  transition: -webkit-transform 0.35s ease-out;
+  transition: transform 0.35s ease-out;
+  transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+}
+
+.underlineAnimation:hover, .homePage .siteNavigation .socialMediaLinksList li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.underlineAnimation:hover::after, .homePage .siteNavigation .socialMediaLinksList li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+/* PAGE LINK (SCALE/GREY COVER) ANIMATION */
+@media only screen and (min-width: 500px) {
+  .linkFullCoverAnimation, .homePage .siteNavigation .pageLinks li {
+    text-decoration: none;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(187, 217, 253, 0.452)));
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(187, 217, 253, 0.452) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .linkFullCoverAnimation:hover, .homePage .siteNavigation .pageLinks li:hover {
+    background-position: left bottom;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    cursor: pointer;
+    font-weight: 900;
+    z-index: 9999;
+    color: black;
+  }
+}
+
 .homePage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,7 +87,7 @@
   height: max-content;
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1300px) {
   .homePage .siteNavigation {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -74,6 +136,10 @@
   }
 }
 
+.homePage .siteNavigation .socialMediaLinksList li {
+  font-style: italic;
+}
+
 .homePage .siteNavigation .pageLinks {
   padding-left: 0;
   list-style-type: none;
@@ -100,7 +166,7 @@
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .homePage {
     width: 90%;
     -webkit-box-orient: vertical;
@@ -116,7 +182,7 @@
   }
 }
 
-@media only screen and (max-width: 1100px) and (max-width: 500px) {
+@media only screen and (max-width: 1300px) and (max-width: 500px) {
   .homePage .siteNavigation h1 {
     margin: 0;
     margin-bottom: 10px;
@@ -126,13 +192,13 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .homePage .siteNavigation .socialMediaLinksList .socialMediaListItem {
     display: inline-block;
   }
 }
 
-@media only screen and (max-width: 1100px) and (max-width: 500px) {
+@media only screen and (max-width: 1300px) and (max-width: 500px) {
   .homePage .siteNavigation .menuAndSwitchContainer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -141,19 +207,19 @@
   }
 }
 
-@media only screen and (max-width: 1100px) and (max-width: 600px) {
+@media only screen and (max-width: 1300px) and (max-width: 600px) {
   .homePage .siteNavigation .pageLinks {
     margin-top: 0;
   }
 }
 
-@media only screen and (max-width: 1100px) and (max-width: 500px) {
+@media only screen and (max-width: 1300px) and (max-width: 500px) {
   .homePage .siteNavigation .pageLinks {
     display: none;
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .homePage .siteNavigation .pageLinks li {
     width: 100%;
   }
