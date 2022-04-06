@@ -51,7 +51,7 @@ const MenuButton = () => {
         >
           <div className="dropDownPageLink two" style={{ color: theme.color }}>
             {" "}
-            Programs{" "}
+            Programs & Projects{" "}
           </div>
         </Link>
       </div>

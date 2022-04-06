@@ -57,7 +57,7 @@ const ProjectProgramsPage = () => {
         <h4 className="programDates" style={{ fontFamily: "norseregular" }}>
           April 2021 - present
         </h4>
-        <p className="programDetails">
+        {/* <p className="programDetails">
           Where it all began. The Odin Project has taught me a great deal and is
           what drove me to seriously consider being a web developer and take the
           step forward for the career change. I have dedicated quite some time
@@ -69,6 +69,10 @@ const ProjectProgramsPage = () => {
           developer a reality. I know I still have a great deal to learn and
           that the learning never ends but the only way is up and I will get
           there one project at a time.
+        </p> */}
+        <p>
+          Click below to see all the projects I've completed up until this point
+          under The Odin Project!
         </p>
         <Link
           to={{
@@ -125,9 +129,9 @@ const ProjectProgramsPage = () => {
           </h3>
         </a>
         <h4 className="programDates" style={{ fontFamily: "Roboto" }}>
-          January 2021 - April 2021
+          January 2022 - April 2022
         </h4>
-        <p className="programDetails">
+        {/* <p className="programDetails">
           The next phase of my journey. Taught by industry professionals, I
           enrolled in Brainstation to learn what I could not being self taught.
           This program has been proven to create quality web developers and I
@@ -135,6 +139,10 @@ const ProjectProgramsPage = () => {
           builds upon and goes beyond the topics I have learned previously
           through The Odin Project. I am excited for what the program has in
           store as well as the people I will meet throughout my time here.
+        </p> */}
+        <p>
+          Click below to see all the projects I've completed up until this point
+          under BrainStation!
         </p>
         <Link
           to={{

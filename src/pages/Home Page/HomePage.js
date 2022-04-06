@@ -73,7 +73,7 @@ function HomePage() {
                   e.currentTarget.style.color = checkSpecialStyling("false");
                 }}
               >
-                <span className="pageLinksUnderline">Programs</span>
+                <span className="pageLinksUnderline">Programs & Projects</span>
               </li>
             </Link>
           </ul>
